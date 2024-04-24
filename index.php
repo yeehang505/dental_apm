@@ -14,8 +14,6 @@
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -24,19 +22,21 @@
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet"> -->
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="assets/css/calender.css" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="assets/css/glyphicon.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Restaurantly
-  * Template URL: https://bootstrapmade.com/restaurantly-restaurant-template/
-  * Updated: Mar 17 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+
+  <!-- Toastr -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+
+  <!-- Datetime picker -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap4-datetimepicker@5.2.3/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
@@ -97,7 +97,7 @@
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-      <a href="#book-a-table" class="book-a-table-btn scrollto d-none d-lg-flex">Book a table</a>
+      <a href="#book-a-table" class="book-a-table-btn scrollto d-none d-lg-flex">Make Appoinment</a>
 
     </div>
   </header><!-- End Header -->
@@ -112,7 +112,7 @@
 
           <div class="btns">
             <a href="#menu" class="btn-menu animated fadeInUp scrollto">Our Menu</a>
-            <a href="#book-a-table" class="btn-book animated fadeInUp scrollto">Book a Table</a>
+            <a href="#book-a-table" class="btn-book animated fadeInUp scrollto">Make Appoinment</a>
           </div>
         </div>
         <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200">
@@ -512,13 +512,13 @@
       </div>
     </section><!-- End Events Section -->
 
-    <!-- ======= Book A Table Section ======= -->
+    <!-- ======= Make Appoinment Section ======= -->
     <!-- <section id="book-a-table" class="book-a-table">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
           <h2>Reservation</h2>
-          <p>Book a Table</p>
+          <p>Make Appoinment</p>
         </div>
 
         <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
@@ -557,117 +557,127 @@
             <div class="error-message"></div>
             <div class="sent-message">Your booking request was sent. We will call back or send an Email to confirm your reservation. Thank you!</div>
           </div>
-          <div class="text-center"><button type="submit">Book a Table</button></div>
+          <div class="text-center"><button type="submit">Make Appoinment</button></div>
         </form>
 
       </div>
     </section> -->
-    <!-- <section id="calender-booking" >
-    <div class="month">      
-      <ul>
-        <li class="prev">&#10094;</li>
-        <li class="next">&#10095;</li>
-        <li>
-          August<br>
-          <span style="font-size:18px">2021</span>
-        </li>
-      </ul>
-    </div>
-
-    <ul class="weekdays">
-      <li>Mo</li>
-      <li>Tu</li>
-      <li>We</li>
-      <li>Th</li>
-      <li>Fr</li>
-      <li>Sa</li>
-      <li>Su</li>
-    </ul>
-
-    <ul class="days">  
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-      <li>5</li>
-      <li>6</li>
-      <li>7</li>
-      <li>8</li>
-      <li>9</li>
-      <li>
-        <span class="active">10</span>
-      </li>
-      <li>11</li>
-      <li>12</li>
-      <li>13</li>
-      <li>14</li>
-      <li>15</li>
-      <li>16</li>
-      <li>17</li>
-      <li>18</li>
-      <li>19</li>
-      <li>20</li>
-      <li>21</li>
-      <li>22</li>
-      <li>23</li>
-      <li>24</li>
-      <li>25</li>
-      <li>26</li>
-      <li>27</li>
-      <li>28</li>
-      <li>29</li>
-      <li>30</li>
-      <li>31</li>
-    </ul>
-    </section> -->
     <section id="book-a-table" class="book-a-table">
-    <div class="container" data-aos="fade-up">
+      <div class="container" data-aos="fade-up">
 
-<div class="section-title">
-  <h2>Reservation</h2>
-  <p>Make an Appointment</p>
-</div>
-    <div class="wrapper">
-
-    <div class="container-calendar">
-        <h3 id="monthAndYear"></h3>
-        
-        <div class="button-container-calendar">
-            <button id="previous" onclick="previous()">&#8249;</button>
-            <button id="next" onclick="next()">&#8250;</button>
+        <div class="section-title">
+          <h2>Reservation</h2>
+          <p>Make an Appointment</p>
         </div>
-        
-        <table class="table-calendar" id="calendar" data-lang="en">
-            <thead id="thead-month"></thead>
-            <tbody id="calendar-body"></tbody>
-        </table>
-        
-        <div class="footer-container-calendar">
-             <label for="month">Jump To: </label>
-             <select id="month" onchange="jump()">
-                 <option value=0>Jan</option>
-                 <option value=1>Feb</option>
-                 <option value=2>Mar</option>
-                 <option value=3>Apr</option>
-                 <option value=4>May</option>
-                 <option value=5>Jun</option>
-                 <option value=6>Jul</option>
-                 <option value=7>Aug</option>
-                 <option value=8>Sep</option>
-                 <option value=9>Oct</option>
-                 <option value=10>Nov</option>
-                 <option value=11>Dec</option>
-             </select>
-             <select id="year" onchange="jump()"></select>       
-        </div>
+        <div class="wrapper">
 
-    </div>
-    
-</div>
-</div>
+          <div class="container-calendar">
+            <h3 id="monthAndYear"></h3>
+
+            <div class="button-container-calendar">
+              <button id="previous" onclick="previous()">&#8249;</button>
+              <button id="next" onclick="next()">&#8250;</button>
+            </div>
+
+            <table class="table-calendar" id="calendar" data-lang="en">
+              <thead id="thead-month"></thead>
+              <tbody id="calendar-body"></tbody>
+            </table>
+
+            <div class="footer-container-calendar">
+              <label for="month">Jump To: </label>
+              <select id="month" onchange="jump()">
+                <option value=0>Jan</option>
+                <option value=1>Feb</option>
+                <option value=2>Mar</option>
+                <option value=3>Apr</option>
+                <option value=4>May</option>
+                <option value=5>Jun</option>
+                <option value=6>Jul</option>
+                <option value=7>Aug</option>
+                <option value=8>Sep</option>
+                <option value=9>Oct</option>
+                <option value=10>Nov</option>
+                <option value=11>Dec</option>
+              </select>
+              <select id="year" onchange="jump()"></select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal section -->
+      <!-- Button trigger modal -->
+
+      <!-- Modal -->
+      <div class="modal fade" id="appointmentModal" role="dialog" aria-labelledby="appointmentModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title " id="appointmentModalTitle">Appointment <span id="apm_date"></span></h5>
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form action="" method="post" role="form" class="">
+                <div class="row">
+                  <div class="col-lg-6 col-md-6 form-group">
+                    <label for="time">Name <span class="text-danger">*</span></label>
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name">
+                    <div class="validate-name"></div>
+                  </div>
+                  <div class="col-lg-6 col-md-6 form-group mt-3 mt-md-0">
+                    <label for="time">Email <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
+                    <div class="validate-email"></div>
+                  </div>
+                  <div class="col-lg-6 col-md-6 form-group mt-3 mt-md-2">
+                    <label for="time">Contact <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" name="contact" id="contact" placeholder="Your Contact">
+                    <div class="validate-contact"></div>
+                  </div>
+                  <div class="col-lg-6 col-md-6 form-group mt-2">
+                    <label for="time">Dr <span class="text-danger">*</span></label>
+                    <select class="form-select" name="doctor" id="doctor">
+                      <option value="Dr. John Doe" selected>Dr. John Doe</option>
+                      <option value="Dr. Jane Doe">Dr. Jane Doe</option>
+                    </select>
+                    <div class="validate"></div>
+                  </div>
+                  <div class="col-lg-12 col-md-12 form-group mt-3">
+                    <div class="input-group date" id="timePicker">
+                      <label for="time">Time<span class="text-danger">*</span></label>
+                      <div class="input-group date" id="timePicker">
+                        <input type="text" class="form-control timePicker">
+                        <span class="input-group-addon">
+                          <i< class="fa-solid fa-clock p-2 black-icon  " aria-hidden="true"></i>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="validate-time"></div>
+                  </div>
+                  <!-- <div class="col-lg-4 col-md-6 form-group mt-3">
+                    <input type="number" class="form-control" name="people" id="people" placeholder="# of people">
+                    <div class="validate"></div>
+                  </div>
+                </div> -->
+                  <div class="form-group mt-3">
+                    <textarea class="form-control" name="remark" rows="5" placeholder="Purpose of visit"></textarea>
+                    <div class="validate"></div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger">Submit</button>
+                  </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    
-    <!-- End Book A Table Section -->
+
+    <!-- End Make Appoinment Section -->
 
     <!-- ======= Testimonials Section ======= -->
     <section id="testimonials" class="testimonials section-bg">
@@ -1070,16 +1080,24 @@
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script> -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script> -->
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets\js\calendar.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
 
+  <script src="assets\js\calendar.js"></script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script src="assets\js\timepicker.js"></script>
 </body>
 
 </html>

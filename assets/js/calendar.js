@@ -13,7 +13,7 @@ selectYear = document.getElementById("year");
 selectMonth = document.getElementById("month");
 
 
-createYear = generate_year_range(1970, 2050);
+createYear = generate_year_range(2024, 2026);
 /** or
  * createYear = generate_year_range( 1970, currentYear );
  */
@@ -83,11 +83,9 @@ function showCalendar(month, year) {
     var firstDay = ( new Date( year, month ) ).getDay();
 
     tbl = document.getElementById("calendar-body");
-
     
     tbl.innerHTML = "";
 
-    
     monthAndYear.innerHTML = months[month] + " " + year;
     selectYear.value = year;
     selectMonth.value = month;
@@ -114,7 +112,7 @@ function showCalendar(month, year) {
                 cell.setAttribute("data-year", year);
                 cell.setAttribute("data-month_name", months[month]);
                 cell.className = "date-picker";
-                cell.innerHTML = "<span>" + date + "</span>";
+                cell.innerHTML = "<button type='button' id='day_btn' class='model btn btn-transparent' data-bs-toggle='modal' data-bs-target='#appointmentModal' data-id='" + date + "'>" + date + "</button>";
 
                 if ( date === today.getDate() && year === today.getFullYear() && month === today.getMonth() ) {
                     cell.className = "date-picker selected";
@@ -128,9 +126,29 @@ function showCalendar(month, year) {
 
         tbl.appendChild(row);
     }
-
 }
 
 function daysInMonth(iMonth, iYear) {
     return 32 - new Date(iYear, iMonth, 32).getDate();
 }
+
+document.addEventListener('click', function(event) {
+    if (event.target.id === 'day_btn') {
+          // Retrieve the data-id attribute of the clicked button (which represents the day value)
+        var day = event.target.getAttribute('data-id');
+        
+        // Retrieve current selected year and month
+        var select_year = document.getElementById("year");
+        var select_month = document.getElementById("month");
+        var year = Number(select_year.value);
+        var month = Number(select_month.value) + 1;
+        month = month.toString().padStart(2, '0');
+        day = day.toString().padStart(2, '0');
+        // Log the retrieved values (year, month, and day) to the console
+        // console.log("Selected date:", year, month, day);
+        
+        // Update the appointment-date text
+        var resultSpan = document.getElementById("apm_date");
+        resultSpan.textContent = year + "/" + month + "/" + day;
+    }
+  });

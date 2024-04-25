@@ -579,7 +579,7 @@
               <button id="next" onclick="next()">&#8250;</button>
             </div>
 
-            <table class="table-calendar" id="calendar" data-lang="en">
+            <table class="table-calendar bg-gradient" id="calendar" data-lang="en">
               <thead id="thead-month"></thead>
               <tbody id="calendar-body"></tbody>
             </table>

@@ -620,22 +620,22 @@
               </button>
             </div>
             <div class="modal-body">
-              <form action="" method="post" role="form" class="">
+              <form action="" method="post" class="" id="apm_form">
                 <div class="row">
                   <div class="col-lg-6 col-md-6 form-group">
                     <label for="time">Name <span class="text-danger">*</span></label>
                     <input type="text" name="name" class="form-control" id="name" placeholder="Your Name">
-                    <div class="validate-name"></div>
+                    <div class="validate" id="validate-name"></div>
                   </div>
                   <div class="col-lg-6 col-md-6 form-group mt-3 mt-md-0">
                     <label for="time">Email <span class="text-danger">*</span></label>
                     <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
-                    <div class="validate-email"></div>
+                    <div class="validate" id="validate-email"></div>
                   </div>
                   <div class="col-lg-6 col-md-6 form-group mt-3 mt-md-2">
                     <label for="time">Contact <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" name="contact" id="contact" placeholder="Your Contact">
-                    <div class="validate-contact"></div>
+                    <div class="validate" id="validate-contact"></div>
                   </div>
                   <div class="col-lg-6 col-md-6 form-group mt-2">
                     <label for="time">Dr <span class="text-danger">*</span></label>
@@ -643,19 +643,19 @@
                       <option value="Dr. John Doe" selected>Dr. John Doe</option>
                       <option value="Dr. Jane Doe">Dr. Jane Doe</option>
                     </select>
-                    <div class="validate"></div>
+                    <div class="validate" id="validate-doctor"></div>
                   </div>
                   <div class="col-lg-12 col-md-12 form-group mt-3">
                     <div class="input-group date" id="timePicker">
-                      <label for="time">Time<span class="text-danger">*</span></label>
+                      <label for="">Time<span class="text-danger">*</span></label>
                       <div class="input-group date" id="timePicker">
-                        <input type="text" class="form-control timePicker">
+                        <input type="text" class="form-control timePicker" id="apm_time" oninput="validateTime()">
                         <span class="input-group-addon">
-                          <i< class="fa-solid fa-clock p-2 black-icon  " aria-hidden="true"></i>
+                          <i class="fa-solid fa-clock p-2 black-icon  " aria-hidden="true"></i>
                         </span>
                       </div>
                     </div>
-                    <div class="validate-time"></div>
+                    <div class="validate" id="validate-time"></div>
                   </div>
                   <!-- <div class="col-lg-4 col-md-6 form-group mt-3">
                     <input type="number" class="form-control" name="people" id="people" placeholder="# of people">
@@ -663,12 +663,12 @@
                   </div>
                 </div> -->
                   <div class="form-group mt-3">
-                    <textarea class="form-control" name="remark" rows="5" placeholder="Purpose of visit"></textarea>
-                    <div class="validate"></div>
+                    <textarea class="form-control" id="remark" rows="5" placeholder="Purpose of visit"></textarea>
+                    <div class="validate" id="validate-remark"></div>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-danger">Submit</button>
+                    <button type="submit" class="btn btn-danger">Submit</button>
                   </div>
               </form>
             </div>
@@ -1098,6 +1098,8 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script src="assets\js\timepicker.js"></script>
+  <script src="assets\js\appointment_form.js"></script>
+
 </body>
 
 </html>

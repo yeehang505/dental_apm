@@ -58,23 +58,23 @@ $(document).ready(function () {
         document.getElementById("apm_time").value = "";
 
         // alert("hello");
-        $("#validate-time").text("");
-        $("#validate-time").removeClass("text-danger");
+        $("#validate-time-rule").text("");
+        $("#validate-time-rule").removeClass("text-danger");
     });
 });
 function validateTime() {
     userTime = getUserTime();
     var isToday = userTime.getFullYear() === new Date().getFullYear() && userTime.getMonth() === new Date().getMonth() && userTime.getDate() === new Date().getDate();
     if (isToday && userTime.getHours() <= new Date().getHours() + 2) {
-        //set a text within the div <div id="validate-time"></div>
-        $("#validate-time").text("Time must be at least 2 hours later");
+        //set a text within the div <div id="validate-time-rule"></div>
+        $("#validate-time-rule").text("Time must be at least 2 hours later");
+        $("#validate-time").text("");
         //add class attribute text-danger
-        $("#validate-time").addClass("text-danger");
+        $("#validate-time-rule").addClass("text-danger");
 
     } else {
-
-        $("#validate-time").text("");
-        $("#validate-time").removeClass("text-danger");
+        $("#validate-time-rule").text("");
+        $("#validate-time-rule").removeClass("text-danger");
     }
 }
 function getUserTime() {

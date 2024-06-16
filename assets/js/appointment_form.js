@@ -36,6 +36,7 @@ $(document).ready(function () {
             const timeInput = document.getElementById('apm_time');
             // console.log(timeInput.value);
             const dateInput = document.getElementById('apm_date');
+            console.log(dateInput.textContent)
             const remarkTextarea = document.getElementById("remark");
             const doctorSelect = document.getElementById("doctor");
             // console.log(dateInput.textContent)
@@ -44,6 +45,7 @@ $(document).ready(function () {
                 email: emailInput.value,
                 contact: contactInput.value,
                 time: timeInput.value,
+                date: dateInput.textContent,
                 remark: remarkTextarea.value,
                 doctor: doctorSelect.value,
                 date: dateInput.textContent

@@ -2,6 +2,19 @@
 <html lang="en">
 <?php
 include 'assets/php/connection.php';
+
+session_start();
+if (!isset($_SESSION['id'])) {
+  echo"<script>alert('Please Login')</script>";
+  echo "<script>window.open('login.php','_self')</script>";
+}
+else{
+  $session_id = $_SESSION['id'];
+  $sql = "SELECT * FROM customer WHERE cust_id='$session_id'";
+  $result = mysqli_query($con,$sql);
+  $row = mysqli_fetch_array($result);
+  $cust_name = $row['name'];
+}
 ?>
 <head>
   <meta charset="utf-8">
@@ -48,14 +61,20 @@ include 'assets/php/connection.php';
     <div class="container d-flex justify-content-center justify-content-md-between">
 
       <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-phone d-flex align-items-center"><span>+1 5589 55488 55</span></i>
-        <i class="bi bi-clock d-flex align-items-center ms-4"><span> Mon-Sat: 11AM - 23PM</span></i>
+        <i class="bi bi-phone d-flex align-items-center"><span>06-123 12345</span></i>
+        <i class="bi bi-clock d-flex align-items-center ms-4"><span> Mon-Sat: 9AM - 6PM</span></i>
       </div>
 
       <div class="languages d-none d-md-flex align-items-center">
         <ul>
-          <li>En</li>
-          <li><a href="#">De</a></li>
+          <?php
+          if (!isset($_SESSION['id'])) {
+            echo '  
+          <li><a href="login.php">Sign In</li>
+          <li><a href="register.php">Register</a></li>';
+          }
+          ?>
+        
         </ul>
       </div>
     </div>
@@ -65,37 +84,32 @@ include 'assets/php/connection.php';
   <header id="header" class="fixed-top d-flex align-items-cente">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
 
-      <h1 class="logo me-auto me-lg-0"><a href="index.html">Restaurantly</a></h1>
+      <h1 class="logo me-auto me-lg-0"><a href="index.php">Luminous Smiles Dentistry</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <!-- <a href="index.php" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#menu">Menu</a></li>
+          <li><a class="nav-link scrollto" href="#menu">Services</a></li>
           <li><a class="nav-link scrollto" href="#specials">Specials</a></li>
           <li><a class="nav-link scrollto" href="#events">Events</a></li>
-          <li><a class="nav-link scrollto" href="#chefs">Chefs</a></li>
+          <li><a class="nav-link scrollto" href="#chefs">Dental</a></li>
           <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li class="dropdown"><a href="javascript:void(0);"><span><?php echo $cust_name; ?></span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+              <li class="dropdown"><a href="#"><span>My Account</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
+                  <li><a href="profile.php">Profile</a></li>
+                  <li><a href="#">Reset password</a></li>
                 </ul>
               </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
+              <li><a href="#">My appointment</a></li>
+              <li><a href="#">Log out</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -109,11 +123,11 @@ include 'assets/php/connection.php';
     <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
       <div class="row">
         <div class="col-lg-8">
-          <h1>Welcome to <span>Restaurantly</span></h1>
-          <h2>Delivering great food for more than 18 years!</h2>
+          <h1>Welcome to <span>Luminous Smiles Dentistry</span></h1>
+          <h2>Creating Beautiful Smiles for more than 18 years!</h2>
 
           <div class="btns">
-            <a href="#menu" class="btn-menu animated fadeInUp scrollto">Our Menu</a>
+            <a href="#menu" class="btn-menu animated fadeInUp scrollto">Our Service</a>
             <a href="#book-a-table" class="btn-book animated fadeInUp scrollto">Make Appoinment</a>
           </div>
         </div>
@@ -138,20 +152,17 @@ include 'assets/php/connection.php';
             </div>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+            <h3>Providing exceptional care for a healthy, radiant smile.</h3>
             <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+              Creating beautiful, healthy smiles through advanced dental care and personalized treatment plans. Our team is dedicated to enhancing your oral health and ensuring your comfort with every visit.
             </p>
             <ul>
-              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+              <li><i class="bi bi-check-circle"></i> Delivering top-notch dental services to enhance your comfort and overall oral health.</li>
+              <li><i class="bi bi-check-circle"></i> Our expert team ensures your dental experience is comfortable and pain-free. We use the latest techniques to provide exceptional care, focusing on your overall well-being and satisfaction.</li>
+              <li><i class="bi bi-check-circle"></i> We are committed to delivering gentle and effective dental treatments tailored to your needs. Experience top-tier oral care with our dedicated professionals, ensuring a healthy and radiant smile.</li>
             </ul>
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
+            Experience exceptional dental care tailored to your needs. Our skilled professionals prioritize your comfort and oral health, using advanced techniques to ensure pain-free treatments. Committed to excellence, we provide comprehensive care that leaves you smiling confidently
             </p>
           </div>
         </div>
@@ -165,7 +176,7 @@ include 'assets/php/connection.php';
 
         <div class="section-title">
           <h2>Why Us</h2>
-          <p>Why Choose Our Restaurant</p>
+          <p>Why Choose Our Dentistry</p>
         </div>
 
         <div class="row">
@@ -173,24 +184,24 @@ include 'assets/php/connection.php';
           <div class="col-lg-4">
             <div class="box" data-aos="zoom-in" data-aos-delay="100">
               <span>01</span>
-              <h4>Lorem Ipsum</h4>
-              <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
+              <h4>Personalized Care for Every Patient</h4>
+              <p>We tailor our dental treatments to meet your unique needs, ensuring personalized care that promotes optimal oral health and a beautiful smile.</p>
             </div>
           </div>
 
           <div class="col-lg-4 mt-4 mt-lg-0">
             <div class="box" data-aos="zoom-in" data-aos-delay="200">
               <span>02</span>
-              <h4>Repellat Nihil</h4>
-              <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p>
+              <h4>Advanced Technology and Techniques</h4>
+              <p>Our clinic is equipped with the latest dental technology and employs cutting-edge techniques to provide you with the highest quality care in a comfortable setting.</p>
             </div>
           </div>
 
           <div class="col-lg-4 mt-4 mt-lg-0">
             <div class="box" data-aos="zoom-in" data-aos-delay="300">
               <span>03</span>
-              <h4> Ad ad velit qui</h4>
-              <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
+              <h4>Experienced and Compassionate Team</h4>
+              <p>Our skilled and compassionate dental professionals are dedicated to making your visit pleasant and stress-free, delivering exceptional care with a gentle touch.</p>
             </div>
           </div>
 
@@ -205,7 +216,7 @@ include 'assets/php/connection.php';
 
         <div class="section-title">
           <h2>Menu</h2>
-          <p>Check Our Tasty Menu</p>
+          <p>Check Our Service</p>
         </div>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">

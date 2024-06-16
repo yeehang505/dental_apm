@@ -1,5 +1,6 @@
 <?php
 include "connection.php";
+session_start();
 $data = array('success' => false, 'msg' => 'Error encounter');
 
 $name = $_POST['name'];
@@ -8,18 +9,19 @@ $contact = $_POST['contact'];
 $apm_time = $_POST['time'];
 $remark = $_POST['remark'];
 $apm_date = $_POST['date'];
+$den_id = $_POST['doctor'];
 $apm_status = 0;
 // $den_id = $_POST['den_id'];
 // $cust_id = $_POST['cust_id'];
 $admin_id = 1;
-$cust_id = 1;
+$cust_id = $_SESSION['id'];
 $den_id = 1;
 
 $sql = "INSERT INTO appoinment (apm_time, apm_date, remark, apm_status, den_id, cust_id, admin_id) VALUES (?,?,?,?,?,?,?)";
-$stmt = mysqli_stmt_init($conn);
+$stmt = mysqli_stmt_init($con);
 
 if (!mysqli_stmt_prepare($stmt, $sql)) {
-    error_log("SQL error: " . mysqli_error($conn));
+    error_log("SQL error: " . mysqli_error($con));
     exit();
 } else {
     mysqli_stmt_bind_param($stmt, "sssiiii", $apm_time, $apm_date, $remark, $apm_status, $den_id, $cust_id, $admin_id);

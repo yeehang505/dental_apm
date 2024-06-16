@@ -9,7 +9,7 @@ $subject = $_POST['subject'];
 $message = $_POST['message'];
 $msg1 = "From " . $name . ",\r\n" . $message;
 
-$to = "dentalgg.tse12345@gmail.com"; //receiver
+$to = "mmu.tse12345@gmail.com"; //receiver
 
 if (mail($to, $subject, $msg1, $to)) {
     $data = array('success' => true, 'msg' => 'Message sent successfully');
@@ -19,4 +19,3 @@ if (mail($to, $subject, $msg1, $to)) {
 
 header('Content-Type: application/json');
 echo json_encode($data);
-?>

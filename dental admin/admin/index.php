@@ -39,7 +39,7 @@ $admin_contact = $row_admin['admin_contact'];
 
 
 
-$get_appoinment = "SELECT * FROM appoinment";
+$get_appoinment = "SELECT * FROM appointment";
 $run_appoinment = mysqli_query($con,$get_appoinment);
 $count_appoinment = mysqli_num_rows($run_appoinment);
 
@@ -58,18 +58,18 @@ $count_customer = mysqli_num_rows($run_customer);
 
 
 // Query to get the total number of appointments
-$get_total_appoinments = "SELECT * FROM appoinment";
+$get_total_appoinments = "SELECT * FROM appointment";
 $run_total_appoinments = mysqli_query($con, $get_total_appoinments);
 $count_total_appoinments = mysqli_num_rows($run_total_appoinments);
 
 // Query to get the number of pending appointments
-$get_pending_appoinments = "SELECT COUNT(*) AS count FROM appoinment WHERE apm_status='Pending'";
+$get_pending_appoinments = "SELECT COUNT(*) AS count FROM appointment WHERE apm_status='Pending'";
 $run_pending_appoinments = mysqli_query($con, $get_pending_appoinments);
 $row_pending_appoinments = mysqli_fetch_assoc($run_pending_appoinments);
 $count_pending_appoinments = $row_pending_appoinments['count'];
 
 // Query to get the number of completed (confirmed) appointments
-$get_completed_appoinments = "SELECT COUNT(*) AS count FROM appoinment WHERE apm_status='Confirmed'";
+$get_completed_appoinments = "SELECT COUNT(*) AS count FROM appointment WHERE apm_status='Confirmed'";
 $run_completed_appoinments = mysqli_query($con, $get_completed_appoinments);
 $row_completed_appoinments = mysqli_fetch_assoc($run_completed_appoinments);
 $count_completed_appoinments = $row_completed_appoinments['count'];

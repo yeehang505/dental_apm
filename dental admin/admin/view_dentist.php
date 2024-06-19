@@ -51,7 +51,7 @@ if (!isset($_SESSION['admin_email'])) {
                                 <th>Contact Number</th>
                                 <th>Email</th>
                                 <th>Specification</th>
-                                <th>Availability_Status</th>
+                                <!-- <th>Availability_Status</th> -->
                                 <th>Edit</th>
                             </tr>
                         </thead>
@@ -75,8 +75,8 @@ if (!isset($_SESSION['admin_email'])) {
                                 $den_contact = $row_d['den_contact'];
                                 $den_email = $row_d['den_email'];
                                 $specification = $row_d['specification'];
-                                $availability_id = $row_d['availability_id'];
-                                
+                                // $availability_id = $row_d['availability_id'];
+                                echo "<script>console.log('$specification')</script>";
 
                                 echo "<tr>";
                                 echo "<td>$den_id</td>";
@@ -84,15 +84,14 @@ if (!isset($_SESSION['admin_email'])) {
                                 echo "<td>$den_contact</td>";
                                 echo "<td>$den_email</td>";
                                 echo "<td>$specification</td>";
-                                echo "<td>";
-                                echo "<div id='dStatus$availability_id'>";
-                                if ($availability_id == 0) {
-                                    echo "<button class='btn btn-danger' onclick='changedStatus($den_id, 1)'>Unavailable</button>";
-                                } else {
-                                    echo "<button class='btn btn-success' onclick='changedStatus($den_id, 0)'>Available</button>";
-                                }
-                                echo "</div>";
-                                echo "</td>";
+                                // echo "<td>";
+                                // if ($availability_id == 0) {
+                                //     echo "<button class='btn btn-danger' onclick='changedStatus($den_id, 1)'>Unavailable</button>";
+                                // } else {
+                                //     echo "<button class='btn btn-success' onclick='changedStatus($den_id, 0)'>Available</button>";
+                                // }
+                                // echo "</div>";
+                                // echo "</td>";
                                 echo "<td>";
                                 echo "<a href='index.php?edit_dentist=$den_id'>";
                                 echo "<i class='fa fa-pencil'> </i> Edit";

@@ -38,10 +38,10 @@ CREATE TABLE `admin` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `appoinment`
+-- Table structure for table `appointment`
 --
 
-CREATE TABLE `appoinment` (
+CREATE TABLE `appointment` (
   `apm_id` int(11) NOT NULL,
   `apm_time` varchar(255) NOT NULL,
   `apm_date` varchar(255) NOT NULL,
@@ -121,9 +121,9 @@ ALTER TABLE `admin`
   ADD PRIMARY KEY (`admin_id`);
 
 --
--- Indexes for table `appoinment`
+-- Indexes for table `appointment`
 --
-ALTER TABLE `appoinment`
+ALTER TABLE `appointment`
   ADD PRIMARY KEY (`apm_id`);
 
 --
@@ -161,9 +161,9 @@ ALTER TABLE `admin`
   MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `appoinment`
+-- AUTO_INCREMENT for table `appointment`
 --
-ALTER TABLE `appoinment`
+ALTER TABLE `appointment`
   MODIFY `apm_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --

@@ -116,7 +116,7 @@ else{
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-      <a href="#book-a-table" class="book-a-table-btn scrollto d-none d-lg-flex">Make Appoinment</a>
+      <a href="#book-a-table" class="book-a-table-btn scrollto d-none d-lg-flex">Make appointment</a>
 
     </div>
   </header><!-- End Header -->

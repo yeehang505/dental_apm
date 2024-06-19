@@ -59,6 +59,16 @@ if (!isset($_SESSION['admin_email'])) {
                         </div><!-- form-group Ends -->
 
                         <div class="form-group"><!-- form-group Starts -->
+                            <label class="col-md-3 control-label">Admin Type: </label>
+                            <div class="col-md-6"><!-- col-md-6 Starts -->
+                                <select name="admin_type" class="form-control">
+                                    <option value="normal">Normal Admin</option>
+                                    <option value="superadmin">Super Admin</option>
+                                </select>
+                            </div><!-- col-md-6 Ends -->
+                        </div><!-- form-group Ends -->
+
+                        <div class="form-group"><!-- form-group Starts -->
                             <label class="col-md-3 control-label"></label>
                             <div class="col-md-6"><!-- col-md-6 Starts -->
                                <input type="submit" name="submit" value="Insert Admin" class="btn btn-primary form-control">
@@ -69,19 +79,7 @@ if (!isset($_SESSION['admin_email'])) {
             </div><!-- panel panel-default Ends -->
         </div><!-- col-lg-12 Ends -->
     </div><!-- 2 row Ends -->
-
 <?php
-
-    if (!preg_match("/^[A-Za-z ]*$/", $admin_name)) {
-        echo "<script>alert('Name should not contain numbers')</script>";
-        exit();
-    }
-
-    // Validate contact number (should not contain alphabet and maximum 12 numbers)
-  if (!preg_match("/^[0-9-]{1,12}$/", $admin_contact)) {
-    echo "<script>alert('Contact number should not contain alphabet and must be a maximum of 12 numbers')</script>";
-    exit();
-  }
 
     function validatePassword($password)
     {
@@ -111,6 +109,7 @@ if (!isset($_SESSION['admin_email'])) {
         $admin_contact = $_POST['admin_contact'];
         $admin_image = $_FILES['admin_image']['name'];
         $temp_admin_image = $_FILES['admin_image']['tmp_name'];
+        $admin_type = $_POST['admin_type'];
 
         // Validate email format
         if (!filter_var($admin_email, FILTER_VALIDATE_EMAIL)) {
@@ -125,7 +124,7 @@ if (!isset($_SESSION['admin_email'])) {
         }
 
         // Check if the admin name already exists
-        $check_name_query = "SELECT * FROM adminss WHERE admin_name = '$admin_name'";
+        $check_name_query = "SELECT * FROM admin WHERE admin_name = '$admin_name'";
         $check_name_result = mysqli_query($con, $check_name_query);
         if (mysqli_num_rows($check_name_result) > 0) {
             echo '<script> alert("Admin with the same name already exists. Please choose a different name.")</script>';
@@ -133,7 +132,7 @@ if (!isset($_SESSION['admin_email'])) {
         }
 
         // Check if the admin email already exists
-        $check_email_query = "SELECT * FROM adminss WHERE admin_email = '$admin_email'";
+        $check_email_query = "SELECT * FROM admin WHERE admin_email = '$admin_email'";
         $check_email_result = mysqli_query($con, $check_email_query);
         if (mysqli_num_rows($check_email_result) > 0) {
             echo '<script> alert("Admin with the same email already exists. Please choose a different email.")</script>';
@@ -141,7 +140,7 @@ if (!isset($_SESSION['admin_email'])) {
         }
 
         // Check if the admin contact already exists
-        $check_contact_query = "SELECT * FROM adminss WHERE admin_contact = '$admin_contact'";
+        $check_contact_query = "SELECT * FROM admin WHERE admin_contact = '$admin_contact'";
         $check_contact_result = mysqli_query($con, $check_contact_query);
         if (mysqli_num_rows($check_contact_result) > 0) {
             echo '<script> alert("Admin with the same contact number already exists. Please choose a different contact number.")</script>';
@@ -150,7 +149,7 @@ if (!isset($_SESSION['admin_email'])) {
 
         move_uploaded_file($temp_admin_image, "admin_images/$admin_image");
 
-        $insert_admin = "INSERT INTO admins (admin_name, admin_email, admin_pass, admin_image, admin_contact) VALUES ('$admin_name', '$admin_email', '$admin_pass', '$admin_image', '$admin_contact')";
+        $insert_admin = "INSERT INTO admin (admin_name, admin_email, admin_pass, admin_image, admin_contact, admin_role) VALUES ('$admin_name', '$admin_email', '$admin_pass', '$admin_image', '$admin_contact', '$admin_type')";
 
         $run_admin = mysqli_query($con, $insert_admin);
 

@@ -131,7 +131,7 @@ if (!isset($_SESSION['admin_email'])) {
                 <select class="form-control" name="admin_id" required>
                     <option value="">Select Admin</option>
                     <?php
-                    $get_admins = "SELECT admin_id, admin_name FROM admins";
+                    $get_admins = "SELECT admin_id, admin_name FROM admin";
                     $run_admins = mysqli_query($con, $get_admins);
                     while ($row_admins = mysqli_fetch_array($run_admins)) {
                         echo "<option value='" . $row_admins['admin_id'] . "'>" . $row_admins['admin_name'] . "</option>";
@@ -146,6 +146,7 @@ if (!isset($_SESSION['admin_email'])) {
                 <input name="submit" type="submit" class="btn btn-primary form-control" value="Insert Appointment">
             </div>
         </div>
+
 
     </form>
 </div>
@@ -175,7 +176,7 @@ if (isset($_POST['submit'])) {
     if ($apm_date < $current_date) {
         echo "<script>alert('Appointment date must be in the future.')</script>";
     } else {
-        $insert_appoinment = "INSERT INTO appoinment (apm_time, apm_date, remark, apm_status, den_id, cust_id, admin_id)
+        $insert_appoinment = "INSERT INTO appointment (apm_time, apm_date, remark, apm_status, den_id, cust_id, admin_id)
         VALUES ('$apm_time', '$apm_date', '$remark', '$apm_status', '$den_id', '$cust_id', '$admin_id')";
 
         $run_insert_appointment = mysqli_query($con, $insert_appoinment);

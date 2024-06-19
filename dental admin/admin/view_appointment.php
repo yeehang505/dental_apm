@@ -66,7 +66,11 @@ if (!isset($_SESSION['admin_email'])) {
                             $page = isset($_GET['page']) ? $_GET['page'] : 1;
                             $start = ($page - 1) * $limit;
 
-                            $get_a = "SELECT * FROM appoinment LIMIT $start, $limit";
+            $get_a = "SELECT *, CASE WHEN apm_status = 0 THEN 'Pending' WHEN apm_status = 1 THEN 'Confirmed' WHEN apm_status = 2 THEN 'Cancelled' WHEN apm_status = 3 THEN 'Rejected' END as apm_status FROM appointment 
+            JOIN dentist ON appointment.den_id = dentist.den_id 
+            JOIN admin ON appointment.admin_id = admin.admin_id 
+            JOIN customer ON appointment.cust_id = customer.cust_id ORDER BY apm_id DESC 
+            LIMIT $start, $limit";
                             $run_a = mysqli_query($con, $get_a);
 
                             $i = $start + 1;
@@ -78,18 +82,20 @@ if (!isset($_SESSION['admin_email'])) {
                                 $remark = $row_a['remark'];
                                 $apm_status = $row_a['apm_status'];
                                 $den_id = $row_a['den_id'];
+                                $den_name = $row_a['den_name'];
                                 $cust_id = $row_a['cust_id'];
+                                $cust_name = $row_a['name'];
                                 $admin_id = $row_a['admin_id'];
-                                
+                                $admin_name = $row_a['admin_name'];
 
                                 echo "<tr>";
                                 echo "<td>$apm_id</td>";
                                 echo "<td>$apm_time</td>";
                                 echo "<td>$apm_date</td>";
                                 echo "<td>$remark</td>";
-                                echo "<td>$den_id</td>";
-                                echo "<td>$cust_id</td>";
-                                echo "<td>$admin_id</td>";
+                                echo "<td>$den_name</td>";
+                                echo "<td>$cust_name</td>";
+                                echo "<td>$admin_name</td>";
                                 echo "<td>$apm_status</td>";
                                 echo "<td>";
                                 echo "<a href='index.php?edit_appoinment=$apm_id'>";
@@ -115,7 +121,7 @@ if (!isset($_SESSION['admin_email'])) {
 
             <div class="text-center">
     <?php
-    $get_total = "SELECT COUNT(*) AS total FROM appoinment";
+    $get_total = "SELECT COUNT(*) AS total FROM appointment";
     $total_result = mysqli_query($con, $get_total);
     $total_row = mysqli_fetch_assoc($total_result);
     $total_appoinment = $total_row['total'];

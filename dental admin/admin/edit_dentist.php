@@ -76,6 +76,9 @@ if (!isset($_GET['edit_dentist'])) {
                             <option value="">Select Specification</option>
                             <option value="General" <?php if ($specification == 'General') echo 'selected'; ?>>General</option>
                             <option value="Orthodontist" <?php if ($specification == 'Orthodontist') echo 'selected'; ?>>Orthodontist</option>
+                            <option value="Pedodontist" <?php if ($specification == 'Pedodontist') echo 'selected'; ?>>Pedodontist</option>
+                            <option value="Periodontist" <?php if ($specification == 'Periodontist') echo 'selected'; ?>>Periodontist</option>
+                            <option value="Cosmetic Dentist" <?php if ($specification == 'Cosmetic Dentist') echo 'selected'; ?>>Cosmetic Dentist</option>
                         </select>
                     </div>
                     <div class="form-group">

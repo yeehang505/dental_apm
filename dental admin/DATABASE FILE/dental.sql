@@ -51,10 +51,10 @@ INSERT INTO `admins` (`admin_id`, `admin_name`, `admin_email`, `admin_pass`, `ad
 -- --------------------------------------------------------
 
 --
--- Table structure for table `appoinment`
+-- Table structure for table `appointment`
 --
 
-CREATE TABLE `appoinment` (
+CREATE TABLE `appointment` (
   `apm_id` int(11) NOT NULL,
   `apm_time` varchar(255) NOT NULL,
   `apm_date` date NOT NULL,
@@ -69,7 +69,7 @@ CREATE TABLE `appoinment` (
 -- Dumping data for table `appointment`
 --
 
-INSERT INTO `appoinment` (`apm_id`, `apm_time`, `apm_date`, `remark`, `apm_status`, `den_id`, `cust_id`, `admin_id`) VALUES
+INSERT INTO `appointment` (`apm_id`, `apm_time`, `apm_date`, `remark`, `apm_status`, `den_id`, `cust_id`, `admin_id`) VALUES
 ('1', '1400', '2024-2-22', 'Check-Up', 'Pending', '1', '1', '1')
 
 -- --------------------------------------------------------
@@ -166,9 +166,9 @@ ALTER TABLE `admin`
   ADD PRIMARY KEY (`admin_id`);
 
 --
--- Indexes for table `appoinment`
+-- Indexes for table `appointment`
 --
-ALTER TABLE `appoinment`
+ALTER TABLE `appointment`
   ADD PRIMARY KEY (`apm_id`);
 
 --
@@ -206,9 +206,9 @@ ALTER TABLE `admin`
   MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `appoinment`
+-- AUTO_INCREMENT for table `appointment`
 --
-ALTER TABLE `appoinment`
+ALTER TABLE `appointment`
   MODIFY `apm_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --

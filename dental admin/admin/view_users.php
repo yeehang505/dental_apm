@@ -1,5 +1,4 @@
 <?php
-
 // Assuming you have already established a database connection
 // $con = mysqli_connect("localhost", "username", "password", "database_name");
 
@@ -11,9 +10,18 @@ if (!isset($_SESSION['admin_email'])) {
     // Retrieve the role of the logged-in admin from the database
     $get_admin_role = "SELECT admin_role FROM admin WHERE admin_email = '$admin_email'";
     $run_admin_role = mysqli_query($con, $get_admin_role);
-    $row_admin_role = mysqli_fetch_assoc($run_admin_role);
-    $admin_role = $row_admin_role['admin_role'];
+    
+    if (!$run_admin_role) {
+        die("Database query failed: " . mysqli_error($con));
+    }
 
+    $row_admin_role = mysqli_fetch_assoc($run_admin_role);
+    
+    if (!$row_admin_role) {
+        die("Admin role not found for email: " . $admin_email);
+    }
+
+    $admin_role = $row_admin_role['admin_role'];
     $_SESSION['admin_role'] = $admin_role;
 
     // Check if the logged-in admin is the superadmin
@@ -49,11 +57,11 @@ if (!isset($_SESSION['admin_email'])) {
                                 <th>Email</th>
                                 <th>Image</th>
                                 <th>Contact</th>
-                                <th>Admin role</th> 
+                                <th>Admin Role</th> 
                                 <?php if ($is_superadmin) { ?>
                                     <th>Edit</th>
+                                    <th>Admin Status</th>
                                 <?php } ?>
-                                <th>Admin Status</th>
                             </tr>
                         </thead><!-- thead Ends -->
                         <tbody><!-- tbody Starts -->
@@ -77,21 +85,20 @@ if (!isset($_SESSION['admin_email'])) {
                                     <td><?php echo $admin_role; ?></td>
                                     <?php if ($is_superadmin) { ?>
                                         <td>
-                                        <a href="index.php?edit_user=<?php echo $admin_id; ?>">
-                                            <i class="fa fa-pencil"> </i> Edit
-                                        </a>
+                                            <a href="index.php?edit_user=<?php echo $admin_id; ?>">
+                                                <i class="fa fa-pencil"> </i> Edit
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <div id="adminStatus<?php echo $admin_id; ?>">
+                                                <?php if ($admin_status == 0) { ?>
+                                                    <button class="btn btn-danger" onclick="changeAdStatus(<?php echo $admin_id; ?>, 1)">Inactive</button>
+                                                <?php } else { ?>
+                                                    <button class="btn btn-success" onclick="changeAdStatus(<?php echo $admin_id; ?>, 0)">Active</button>
+                                                <?php } ?>
+                                            </div>
                                         </td>
                                     <?php } ?>
-                                    <td>
-                                        <div id="adminStatus<?php echo $admin_id; ?>">
-                                            <?php if ($admin_status == 0) { ?>
-                                                <button class="btn btn-danger" onclick="changeAdStatus(<?php echo $admin_id; ?>, 1)">Inactive</button>
-                                            <?php } else { ?>
-                                                <button class="btn btn-success" onclick="changeAdStatus(<?php echo $admin_id; ?>, 0)">Active</button>
-                                            <?php } ?>
-                                        </div>
-                                    </td>
-                                    
                                 </tr>
                             <?php } ?>
                         </tbody><!-- tbody Ends -->
@@ -113,7 +120,6 @@ if (!isset($_SESSION['admin_email'])) {
         data: { record: id, status: status },
         success: function (data) {
             alert('Status updated successfully');
-            $('form').trigger('reset');
             // Reload the page to reflect the updated status
             window.location.reload();
         },

@@ -14,9 +14,8 @@ else{
   $result = mysqli_query($con,$sql);
   $row = mysqli_fetch_array($result);
   $cust_name = $row['name'];
-  $cust_email = $row['email'];
-  $cust_contact_no = $row['contact_no'];
-  $cust_ic = $row['ic'];
+ 
+ 
 }
 ?>
 <head>
@@ -105,7 +104,7 @@ else{
             <ul>
               <li class="dropdown"><a href="#"><span>My Account</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="profile.php">Profile</a></li>
+                  <li><a href="#">Profile</a></li>
                   <li><a href="#">Reset password</a></li>
                 </ul>
               </li>
@@ -122,34 +121,50 @@ else{
   </header><!-- End Header -->
 
   <main id="main">
-      <section id="contact" class="contact" >
-        <div class="container" data-aos="fade-up">
+    <section>
+    <div class="container">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Appointment ID</th>
+          <th scope="col">Time</th>
+          <th scope="col">Date</th>
+          <th scope="col">Remark</th>
+          <th scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php
+          $i = 0;
+          $run_appointment = mysqli_query($con, "SELECT * FROM appointment WHERE cust_id='$session_id'");
+          while ($row_appointment = mysqli_fetch_array($run_appointment)) {
+            $apm_id = $row_appointment['apm_id'];
+            $apm_time = $row_appointment['apm_time'];
+            $apm_date = $row_appointment['apm_date'];
+            $remark = $row_appointment['remark'];
+            $apm_status = $row_appointment['apm_status'];
 
-          <div class="section-title">
-            <h2>Update Password</h2>
-          </div>
-          <div class="row mt-5">
-            <div class="col-lg-12 mt-5 mt-lg-0">
-              <form id="update_password" method="post" role="form" class="php-email-form">
-                <div class="row">
-                  <div class="col-md-12 form-group">
-                    <input type="password" name="current_password" class="form-control" id="current_password" placeholder="Current Password" required>
-                    <div id="validate_current_password" class="text-danger"></div>
-                  </div>
-                  <div class="col-md-12 form-group mt-3 mt-md-0">
-                    <input type="password" class="form-control" name="new_password" id="new_password" placeholder="New Password" required>
-                    <div id="validate_new_password" class="text-danger"></div>
-                  </div>
-                  <div class="col-md-12 form-group">
-                    <input type="password" name="confirm_password" class="form-control" id="confirm_password" placeholder="Confirm Password" required>
-                    <div id="validate_confirm_password" class="text-danger"></div>
-                  </div>
-                </div>
-                <div class="text-center"><button type="submit">Update Password</button></div>
-              </form>
-            </div>
-          </div>
-        </div>
+            $i++;
+
+            // Set the color of the text based on the status
+            $status_color = ($apm_status == '0') ? 'text-danger' : (($apm_status == '1') ? 'text-success' : (($apm_status == '2') ? 'text-warning' : 'text-primary'));
+
+            // Set the status text based on the status
+            $status_text = ($apm_status == '0') ? 'Pending' : (($apm_status == '1') ? 'Confirmed' : (($apm_status == '2') ? 'Cancelled' : 'Rejected'));
+
+            echo "<tr>
+              <th scope='row'>{$i}</th>
+              <td>{$apm_time}</td>
+              <td>{$apm_date}</td>
+              <td>{$remark}</td>
+              <td class='{$status_color}'>{$status_text}</td>
+              </tr>";
+          }
+        ?>
+      </tbody>
+    </table>
+    </div>
     </section>
   </main><!-- End #main -->
 
@@ -248,7 +263,7 @@ else{
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <script src="assets\js\update_password.js"></script>
+  <script src="assets\js\profile.js"></script>
 
 
 </body>

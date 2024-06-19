@@ -264,7 +264,7 @@ else {
 $i = 0;
 
 // Fetch the latest 5 appointments
-$get_appointment = "SELECT * FROM appoinment ORDER BY apm_id DESC LIMIT 0,5";
+$get_appointment = "SELECT * FROM appointment ORDER BY apm_id DESC LIMIT 0,5";
 $run_appointment = mysqli_query($con, $get_appointment);
 
 while ($row_appointment = mysqli_fetch_array($run_appointment)) {

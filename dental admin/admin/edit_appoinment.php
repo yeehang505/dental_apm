@@ -11,7 +11,7 @@ if (!isset($_SESSION['admin_email'])) {
     if (isset($_GET['edit_appoinment'])) {
         $edit_id = $_GET['edit_appoinment'];
 
-        $get_appt = "SELECT * FROM appoinment WHERE apm_id='$edit_id'";
+        $get_appt = "SELECT * FROM appointment WHERE apm_id='$edit_id'";
         $run_edit = mysqli_query($con, $get_appt);
         $row_edit = mysqli_fetch_array($run_edit);
 
@@ -35,7 +35,7 @@ if (!isset($_SESSION['admin_email'])) {
     $row_customer = mysqli_fetch_array($run_customer);
     $cust_name = $row_customer['name'];
 
-    $get_admin = "SELECT * FROM admins WHERE admin_id='$admin_id'";
+    $get_admin = "SELECT * FROM admin WHERE admin_id='$admin_id'";
     $run_admin = mysqli_query($con, $get_admin);
     $row_admin = mysqli_fetch_array($run_admin);
     $admin_name = $row_admin['admin_name'];
@@ -135,7 +135,7 @@ if (!isset($_SESSION['admin_email'])) {
                             <select class="form-control" name="admin_id" required>
                                 <option value="<?php echo $admin_id; ?>"><?php echo $admin_name; ?></option>
                                 <?php
-                                $get_admins = "SELECT admin_id, admin_name FROM admins";
+                                $get_admins = "SELECT admin_id, admin_name FROM admin";
                                 $run_admins = mysqli_query($con, $get_admins);
                                 while ($row_admins = mysqli_fetch_array($run_admins)) {
                                     echo "<option value='" . $row_admins['admin_id'] . "'>" . $row_admins['admin_name'] . "</option>";
@@ -173,7 +173,7 @@ if (isset($_POST['update'])) {
     if ($apm_date < $current_date) {
         echo "<script>alert('Appointment date must be in the future.')</script>";
     } else {
-        $update_appointment = "UPDATE appoinment SET apm_time='$apm_time', apm_date='$apm_date', remark='$remark', apm_status='$apm_status', den_id='$den_id', cust_id='$cust_id', admin_id='$admin_id' WHERE apm_id='$apm_id'";
+        $update_appointment = "UPDATE appointment SET apm_time='$apm_time', apm_date='$apm_date', remark='$remark', apm_status='$apm_status', den_id='$den_id', cust_id='$cust_id', admin_id='$admin_id' WHERE apm_id='$apm_id'";
 
         $run_update_appointment = mysqli_query($con, $update_appointment);
 

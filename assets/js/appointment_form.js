@@ -38,8 +38,8 @@ $(document).ready(function () {
             const dateInput = document.getElementById('apm_date');
             console.log(dateInput.textContent)
             const remarkTextarea = document.getElementById("remark");
-            const doctorSelect = document.getElementById("doctor");
-            // console.log(dateInput.textContent)
+            const doctorSelect = parseInt(document.getElementById("dentist_list").value);
+            console.log(doctorSelect, typeof doctorSelect);
             var  formData =  {
                 name: nameInput.value,
                 email: emailInput.value,
@@ -47,7 +47,7 @@ $(document).ready(function () {
                 time: timeInput.value,
                 date: dateInput.textContent,
                 remark: remarkTextarea.value,
-                doctor: doctorSelect.value,
+                doctor: doctorSelect,
                 date: dateInput.textContent
             }
             // send the AJAX request
@@ -99,10 +99,10 @@ function validateForm() {
     const contactInput = document.getElementById('contact');
     const timeInput = document.getElementById('apm_time');
     const remarkTextarea = document.getElementById("remark");
-    const doctorSelect = document.getElementById("doctor");
+    const doctorSelect = document.getElementById("dentist_list");
     
     var validate_time_content = document.getElementById('validate-time-rule').textContent;
-    console.log(validate_time_content);
+    // console.log(validate_time_content);
     var elementId = "";
     // Perform validation checks for each input field
     if (nameInput.value.trim() === '') {
@@ -148,7 +148,7 @@ function validateForm() {
         showValidationMessage(elementId, 'Remark field cannot be empty');
         error++
     }
-
+    // console.log(doctorSelect.value.trim());
     if (doctorSelect.value.trim() === '') {
         elementId = "validate-doctor";
         showValidationMessage(elementId, 'Doctor field cannot be empty');

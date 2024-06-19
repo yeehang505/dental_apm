@@ -52,7 +52,7 @@ if (!isset($_SESSION['admin_email'])) {
                                 <th>Contact Number</th>
                                 <th>Ic</th>
                                 <th>Password</th>
-                                <th>Status</th>
+                                <!-- <th>Status</th> -->
                             </tr>
                         </thead>
                         <!-- thead Ends -->
@@ -76,7 +76,7 @@ if (!isset($_SESSION['admin_email'])) {
                                 $c_contact = $row_c['contact_no'];
                                 $c_ic = $row_c['ic'];
                                 $c_pass = $row_c['cust_pass'];
-                                $c_status = $row_c['c_status'];
+                                // $c_status = $row_c['c_status'];
                                 
 
                                 echo "<tr>";
@@ -86,15 +86,15 @@ if (!isset($_SESSION['admin_email'])) {
                                 echo "<td>$c_contact</td>";
                                 echo "<td>$c_ic</td>";
                                 echo "<td>$c_pass</td>";
-                                echo "<td>";
-                                echo "<div id='cStatus$c_status'>";
-                                if ($c_status == 0) {
-                                    echo "<button class='btn btn-danger' onclick='changeCStatus($c_id, 1)'>Inactive</button>";
-                                } else {
-                                    echo "<button class='btn btn-success' onclick='changeCStatus($c_id, 0)'>Active</button>";
-                                }
-                                echo "</div>";
-                                echo "</td>";
+                                // echo "<td>";
+                                // echo "<div id='cStatus$c_status'>";
+                                // if ($c_status == 0) {
+                                //     echo "<button class='btn btn-danger' onclick='changeCStatus($c_id, 1)'>Inactive</button>";
+                                // } else {
+                                //     echo "<button class='btn btn-success' onclick='changeCStatus($c_id, 0)'>Active</button>";
+                                // }
+                                // echo "</div>";
+                                // echo "</td>";
                                 echo "</tr>";
 
                                 $i++;

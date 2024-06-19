@@ -140,7 +140,7 @@ else {
 
 <li><!-- Appointment li Starts -->
 
-<a href="#" data-toggle="collapse" data-target="#appoinment">
+<a href="#" data-toggle="collapse" data-target="#appointment">
 
 <i class="fa fa-fw fa-table"></i> Appointment
 
@@ -149,7 +149,7 @@ else {
 
 </a>
 
-<ul id="appoinment" class="collapse">
+<ul id="appointment" class="collapse">
 
 <li>
 <a href="index.php?view_appoinment"> View Appointment </a>
@@ -212,7 +212,16 @@ else {
 
 </li>
 
+<?php 
+$admin_email = $_SESSION['admin_email'];
 
+$get_admin = "SELECT admin_role FROM admin WHERE admin_email='$admin_email'";
+$run_admin = mysqli_query($con,$get_admin);
+$row_admin = mysqli_fetch_array($run_admin);
+$admin_role = $row_admin['admin_role'];
+
+if($admin_role == 'superadmin'){
+?>
 <li><!-- li Starts -->
 
 <a href="#" data-toggle="collapse" data-target="#users">
@@ -241,6 +250,9 @@ else {
 </ul>
 
 </li><!-- li Ends -->
+<?php 
+}
+?>
 
 <li><!-- li Starts -->
 

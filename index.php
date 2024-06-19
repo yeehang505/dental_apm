@@ -93,9 +93,9 @@ else{
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#menu">Services</a></li>
-          <li><a class="nav-link scrollto" href="#specials">Specials</a></li>
-          <li><a class="nav-link scrollto" href="#events">Events</a></li>
-          <li><a class="nav-link scrollto" href="#chefs">Dental</a></li>
+          <li><a class="nav-link scrollto" href="#specials">Products</a></li>
+          <li><a class="nav-link scrollto" href="#events">Package</a></li>
+          <li><a class="nav-link scrollto" href="#chefs">Dentist</a></li>
           <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
           <li class="dropdown"><a href="javascript:void(0);"><span><?php echo $cust_name; ?></span> <i class="bi bi-chevron-down"></i></a>
@@ -103,17 +103,17 @@ else{
               <li class="dropdown"><a href="#"><span>My Account</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a href="profile.php">Profile</a></li>
-                  <li><a href="#">Reset password</a></li>
+                  <li><a href="update_password.php">Reset password</a></li>
                 </ul>
               </li>
               <li><a href="#">My appointment</a></li>
-              <li><a href="#">Log out</a></li>
+              <li><a href="javascript:void(0);" id="logout">Log out</a></li>
             </ul>
           </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-      <a href="#book-a-table" class="book-a-table-btn scrollto d-none d-lg-flex">Make Appoinment</a>
+      <a href="#book-a-table" class="book-a-table-btn scrollto d-none d-lg-flex">Make appointment</a>
 
     </div>
   </header><!-- End Header -->
@@ -128,11 +128,11 @@ else{
 
           <div class="btns">
             <a href="#menu" class="btn-menu animated fadeInUp scrollto">Our Service</a>
-            <a href="#book-a-table" class="btn-book animated fadeInUp scrollto">Make Appoinment</a>
+            <a href="#book-a-table" class="btn-book animated fadeInUp scrollto">Make appointment</a>
           </div>
         </div>
         <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200">
-          <a href="https://www.youtube.com/watch?v=u6BOC7CDUTQ" class="glightbox play-btn"></a>
+          <a href="https://youtu.be/lw7xIB0kPCo" class="glightbox play-btn"></a>
         </div>
 
       </div>
@@ -148,7 +148,7 @@ else{
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
             <div class="about-img">
-              <img src="assets/img/about.jpg" alt="">
+              <img src="assets/img/ReceptionArea.jpg" alt="">
             </div>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
@@ -215,7 +215,7 @@ else{
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Menu</h2>
+          <h2>Services</h2>
           <p>Check Our Service</p>
         </div>
 
@@ -223,9 +223,9 @@ else{
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="menu-flters">
               <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-starters">Starters</li>
-              <li data-filter=".filter-salads">Salads</li>
-              <li data-filter=".filter-specialty">Specialty</li>
+              <li data-filter=".filter-starters">Preventive Care</li>
+              <li data-filter=".filter-salads">Restorative Dentistry</li>
+              <li data-filter=".filter-specialty">Cosmetic Dentistry</li>
             </ul>
           </div>
         </div>
@@ -233,92 +233,92 @@ else{
         <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
 
           <div class="col-lg-6 menu-item filter-starters">
-            <img src="assets/img/menu/lobster-bisque.jpg" class="menu-img" alt="">
+            <img src="assets/img/menu/checkup.png" class="menu-img" alt="">
             <div class="menu-content">
-              <a href="#">Lobster Bisque</a><span>$5.95</span>
+              <a href="#">Dental Check-ups</a><span>$5.95</span>
             </div>
             <div class="menu-ingredients">
-              Lorem, deren, trataro, filede, nerada
+            Regular examinations to monitor oral health and detect issues early.
             </div>
           </div>
 
           <div class="col-lg-6 menu-item filter-specialty">
-            <img src="assets/img/menu/bread-barrel.jpg" class="menu-img" alt="">
+            <img src="assets/img/menu/whitening.png" class="menu-img" alt="">
             <div class="menu-content">
-              <a href="#">Bread Barrel</a><span>$6.95</span>
+              <a href="#">Teeth Whitening</a><span>$6.95</span>
             </div>
             <div class="menu-ingredients">
-              Lorem, deren, trataro, filede, nerada
+            Procedures to lighten and remove stains from teeth.
             </div>
           </div>
 
           <div class="col-lg-6 menu-item filter-starters">
-            <img src="assets/img/menu/cake.jpg" class="menu-img" alt="">
+            <img src="assets/img/menu/fluoridetreatment.png" class="menu-img" alt="">
             <div class="menu-content">
-              <a href="#">Crab Cake</a><span>$7.95</span>
+              <a href="#">Fluoride Treatments</a><span>$7.95</span>
             </div>
             <div class="menu-ingredients">
-              A delicate crab cake served on a toasted roll with lettuce and tartar sauce
+            Application of fluoride to strengthen teeth and prevent cavities.
             </div>
           </div>
 
           <div class="col-lg-6 menu-item filter-salads">
-            <img src="assets/img/menu/caesar.jpg" class="menu-img" alt="">
+            <img src="assets/img/menu/filling.png" class="menu-img" alt="">
             <div class="menu-content">
-              <a href="#">Caesar Selections</a><span>$8.95</span>
+              <a href="#">Fillings</a><span>$8.95</span>
             </div>
             <div class="menu-ingredients">
-              Lorem, deren, trataro, filede, nerada
+            Repairing cavities with materials such as composite resin or amalgam.
             </div>
           </div>
 
           <div class="col-lg-6 menu-item filter-specialty">
-            <img src="assets/img/menu/tuscan-grilled.jpg" class="menu-img" alt="">
+            <img src="assets/img/menu/dental-veneer.png" class="menu-img" alt="">
             <div class="menu-content">
-              <a href="#">Tuscan Grilled</a><span>$9.95</span>
+              <a href="#">Veneers</a><span>$9.95</span>
             </div>
             <div class="menu-ingredients">
-              Grilled chicken with provolone, artichoke hearts, and roasted red pesto
+            Thin shells of porcelain or composite resin bonded to the front of teeth to improve appearance.
             </div>
           </div>
 
           <div class="col-lg-6 menu-item filter-starters">
-            <img src="assets/img/menu/mozzarella.jpg" class="menu-img" alt="">
+            <img src="assets/img/menu/tooth-brush.png" class="menu-img" alt="">
             <div class="menu-content">
-              <a href="#">Mozzarella Stick</a><span>$4.95</span>
+              <a href="#">Teeth Cleaning</a><span>$4.95</span>
             </div>
             <div class="menu-ingredients">
-              Lorem, deren, trataro, filede, nerada
+            Professional cleaning to remove plaque, tartar, and stains.
             </div>
           </div>
 
           <div class="col-lg-6 menu-item filter-salads">
-            <img src="assets/img/menu/greek-salad.jpg" class="menu-img" alt="">
+            <img src="assets/img/menu/dental-implant.png" class="menu-img" alt="">
             <div class="menu-content">
-              <a href="#">Greek Salad</a><span>$9.95</span>
+              <a href="#">Crowns</a><span>$9.95</span>
             </div>
             <div class="menu-ingredients">
-              Fresh spinach, crisp romaine, tomatoes, and Greek olives
+            Caps placed over damaged teeth to restore their shape, strength, and function.
             </div>
           </div>
 
           <div class="col-lg-6 menu-item filter-salads">
-            <img src="assets/img/menu/spinach-salad.jpg" class="menu-img" alt="">
+            <img src="assets/img/menu/bridge.png" class="menu-img" alt="">
             <div class="menu-content">
-              <a href="#">Spinach Salad</a><span>$9.95</span>
+              <a href="#">Bridges</a><span>$9.95</span>
             </div>
             <div class="menu-ingredients">
-              Fresh spinach with mushrooms, hard boiled egg, and warm bacon vinaigrette
+            Fixed prosthetics used to replace one or more missing teeth.
             </div>
           </div>
 
           <div class="col-lg-6 menu-item filter-specialty">
-            <img src="assets/img/menu/lobster-roll.jpg" class="menu-img" alt="">
+            <img src="assets/img/menu/bonding.png" class="menu-img" alt="">
             <div class="menu-content">
-              <a href="#">Lobster Roll</a><span>$12.95</span>
+              <a href="#">Bonding</a><span>$12.95</span>
             </div>
             <div class="menu-ingredients">
-              Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll
+            Application of tooth-colored resin to repair chips, cracks, or gaps.
             </div>
           </div>
 
@@ -332,27 +332,27 @@ else{
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Specials</h2>
-          <p>Check Our Specials</p>
+          <h2>Products</h2>
+          <p>Check Our Products</p>
         </div>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-3">
             <ul class="nav nav-tabs flex-column">
               <li class="nav-item">
-                <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Modi sit est</a>
+                <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">GentleBrite</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Unde praesentium sed</a>
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-2">CharcoalSilk</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Pariatur explicabo vel</a>
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-3">OceanBreeze</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Nostrum qui quasi</a>
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Silksoft Glide</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Iusto ut expedita aut</a>
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-5">GumGuard Probiotics</a>
               </li>
             </ul>
           </div>
@@ -361,60 +361,55 @@ else{
               <div class="tab-pane active show" id="tab-1">
                 <div class="row">
                   <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Architecto ut aperiam autem id</h3>
-                    <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
-                    <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>
+                    <h3>GentleBrite</h3>
+                    <p class="fst-italic">For those with sensitive teeth, GentleBrite offers a soothing solution. This toothpaste gently whitens while protecting sensitive areas, ensuring a comfortable, radiant smile.</p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/specials-1.png" alt="" class="img-fluid">
+                    <img src="assets/img/Gentlebrite.png" alt="" class="img-fluid">
                   </div>
                 </div>
               </div>
               <div class="tab-pane" id="tab-2">
                 <div class="row">
                   <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Et blanditiis nemo veritatis excepturi</h3>
-                    <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
-                    <p>Ea ipsum voluptatem consequatur quis est. Illum error ullam omnis quia et reiciendis sunt sunt est. Non aliquid repellendus itaque accusamus eius et velit ipsa voluptates. Optio nesciunt eaque beatae accusamus lerode pakto madirna desera vafle de nideran pal</p>
+                    <h3>CharcoalSilk</h3>
+                    <p class="fst-italic">Infused with activated charcoal bristles to help whiten teeth and remove surface stains effectively, featuring ultra-soft bristles for sensitive gums, ensuring a gentle yet thorough clean.</p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/specials-2.png" alt="" class="img-fluid">
+                    <img src="assets/img/Charcoalsilk.png" alt="" class="img-fluid">
                   </div>
                 </div>
               </div>
               <div class="tab-pane" id="tab-3">
                 <div class="row">
                   <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Impedit facilis occaecati odio neque aperiam sit</h3>
-                    <p class="fst-italic">Eos voluptatibus quo. Odio similique illum id quidem non enim fuga. Qui natus non sunt dicta dolor et. In asperiores velit quaerat perferendis aut</p>
-                    <p>Iure officiis odit rerum. Harum sequi eum illum corrupti culpa veritatis quisquam. Neque necessitatibus illo rerum eum ut. Commodi ipsam minima molestiae sed laboriosam a iste odio. Earum odit nesciunt fugiat sit ullam. Soluta et harum voluptatem optio quae</p>
+                    <h3>OceanBreeze</h3>
+                    <p class="fst-italic">Sea salt and mineral-rich mouthwash that promotes healthy gums and fresh breath with a hint of ocean freshness.</p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/specials-3.png" alt="" class="img-fluid">
+                    <img src="assets/img/OceanBreeze.png" alt="" class="img-fluid">
                   </div>
                 </div>
               </div>
               <div class="tab-pane" id="tab-4">
                 <div class="row">
                   <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Fuga dolores inventore laboriosam ut est accusamus laboriosam dolore</h3>
-                    <p class="fst-italic">Totam aperiam accusamus. Repellat consequuntur iure voluptas iure porro quis delectus</p>
-                    <p>Eaque consequuntur consequuntur libero expedita in voluptas. Nostrum ipsam necessitatibus aliquam fugiat debitis quis velit. Eum ex maxime error in consequatur corporis atque. Eligendi asperiores sed qui veritatis aperiam quia a laborum inventore</p>
+                    <h3>Silksoft Glide</h3>
+                    <p class="fst-italic">Combining the gentle, extra soft design of SensitiveCare with the smooth glide of SilkGlide, ensuring minimal irritation and effective cleaning between teeth and along the gumline.</p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/specials-4.png" alt="" class="img-fluid">
+                    <img src="assets/img/dentalfloss.png" alt="" class="img-fluid">
                   </div>
                 </div>
               </div>
               <div class="tab-pane" id="tab-5">
                 <div class="row">
                   <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Est eveniet ipsam sindera pad rone matrelat sando reda</h3>
-                    <p class="fst-italic">Omnis blanditiis saepe eos autem qui sunt debitis porro quia.</p>
-                    <p>Exercitationem nostrum omnis. Ut reiciendis repudiandae minus. Omnis recusandae ut non quam ut quod eius qui. Ipsum quia odit vero atque qui quibusdam amet. Occaecati sed est sint aut vitae molestiae voluptate vel</p>
+                    <h3>GumGuard Probiotics</h3>
+                    <p class="fst-italic">Protects and strengthens gums by encouraging a balanced and healthy oral microbiome.</p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/specials-5.png" alt="" class="img-fluid">
+                    <img src="assets/img/dentalprobiotic.png" alt="" class="img-fluid">
                   </div>
                 </div>
               </div>
@@ -525,13 +520,13 @@ else{
       </div>
     </section><!-- End Events Section -->
 
-    <!-- ======= Make Appoinment Section ======= -->
+    <!-- ======= Make appointment Section ======= -->
     <!-- <section id="book-a-table" class="book-a-table">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
           <h2>Reservation</h2>
-          <p>Make Appoinment</p>
+          <p>Make appointment</p>
         </div>
 
         <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
@@ -570,7 +565,7 @@ else{
             <div class="error-message"></div>
             <div class="sent-message">Your booking request was sent. We will call back or send an Email to confirm your reservation. Thank you!</div>
           </div>
-          <div class="text-center"><button type="submit">Make Appoinment</button></div>
+          <div class="text-center"><button type="submit">Make appointment</button></div>
         </form>
 
       </div>
@@ -650,14 +645,6 @@ else{
                     <input type="text" class="form-control" name="contact" id="contact" placeholder="Your Contact">
                     <div class="validate" id="validate-contact"></div>
                   </div>
-                  <div class="col-lg-6 col-md-6 form-group mt-2">
-                    <label for="time">Dr <span class="text-danger">*</span></label>
-                    <select class="form-select" name="doctor" id="doctor">
-                      <option value="Dr. John Doe" selected>Dr. John Doe</option>
-                      <option value="Dr. Jane Doe">Dr. Jane Doe</option>
-                    </select>
-                    <div class="validate" id="validate-doctor"></div>
-                  </div>
                   <div class="col-lg-12 col-md-12 form-group mt-3">
                     <div class="input-group date" id="timePicker">
                       <label for="">Time<span class="text-danger">*</span></label>
@@ -670,6 +657,12 @@ else{
                     </div>
                     <div class="validate" id="validate-time"></div>
                     <div class="timeRule" id="validate-time-rule"></div>
+                  </div>
+                  <div class="col-lg-6 col-md-6 form-group mt-2">
+                    <label for="time">Dr <span class="text-danger">* (Please choose your time first)</span></label>
+                    <select class="form-select" style="pointer-events: none;" name="doctor" id="dentist_list">
+                    </select>
+                    <div class="validate" id="validate-doctor"></div>
                   </div>
                   <!-- <div class="col-lg-4 col-md-6 form-group mt-3">
                     <input type="number" class="form-control" name="people" id="people" placeholder="# of people">
@@ -691,7 +684,7 @@ else{
       </div>
     </section>
 
-    <!-- End Make Appoinment Section -->
+    <!-- End Make appointment Section -->
 
     <!-- ======= Testimonials Section ======= -->
     <section id="testimonials" class="testimonials section-bg">
@@ -783,7 +776,7 @@ else{
       <div class="container" data-aos="fade-up">
         <div class="section-title">
           <h2>Gallery</h2>
-          <p>Some photos from Our Restaurant</p>
+          <p>Some photos from Our Dentistry</p>
         </div>
       </div>
 
@@ -793,64 +786,64 @@ else{
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-1.jpg" class="gallery-lightbox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
+              <a href="assets/img/gallery/consultroom.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="assets/img/gallery/consultroom.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-2.jpg" class="gallery-lightbox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
+              <a href="assets/img/gallery/waitingarea.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="assets/img/gallery/waitingarea.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-3.jpg" class="gallery-lightbox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
+              <a href="assets/img/gallery/waitingarea1.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="assets/img/gallery/waitingarea1.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-4.jpg" class="gallery-lightbox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
+              <a href="assets/img/gallery/operationroom.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="assets/img/gallery/operationroom.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-5.jpg" class="gallery-lightbox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
+              <a href="assets/img/gallery/Sterilization Room.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="assets/img/gallery/Sterilization Room.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-6.jpg" class="gallery-lightbox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
+              <a href="assets/img/gallery/consultroom1.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="assets/img/gallery/consultroom1.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-7.jpg" class="gallery-lightbox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
+              <a href="assets/img/gallery/Comfortable Lounge.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="assets/img/gallery/Comfortable Lounge.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-8.jpg" class="gallery-lightbox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
+              <a href="assets/img/gallery/Calming Garden.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="assets/img/gallery/Calming Garden.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
@@ -865,19 +858,19 @@ else{
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Chefs</h2>
-          <p>Our Proffesional Chefs</p>
+          <h2>Dentist</h2>
+          <p>Our Professional Dentist</p>
         </div>
 
         <div class="row">
 
           <div class="col-lg-4 col-md-6">
             <div class="member" data-aos="zoom-in" data-aos-delay="100">
-              <img src="assets/img/chefs/chefs-1.jpg" class="img-fluid" alt="">
+              <img src="assets/img/chefs/Dr-Janice-Tan.jpg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>Walter White</h4>
-                  <span>Master Chef</span>
+                  <h4>Dr. Janice Tan Shuqin</h4>
+                  <span>Dental Surgeon</span>
                 </div>
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
@@ -891,11 +884,11 @@ else{
 
           <div class="col-lg-4 col-md-6">
             <div class="member" data-aos="zoom-in" data-aos-delay="200">
-              <img src="assets/img/chefs/chefs-2.jpg" class="img-fluid" alt="">
+              <img src="assets/img/chefs/Dr-Andy-Ooi.jpg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>Sarah Jhonson</h4>
-                  <span>Patissier</span>
+                  <h4>Dr. Andy Ooi Yet Lee</h4>
+                  <span>Dental Surgeon</span>
                 </div>
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
@@ -909,11 +902,11 @@ else{
 
           <div class="col-lg-4 col-md-6">
             <div class="member" data-aos="zoom-in" data-aos-delay="300">
-              <img src="assets/img/chefs/chefs-3.jpg" class="img-fluid" alt="">
+              <img src="assets/img/chefs/Dr-Beh-Wee-Ren.jpg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>William Anderson</h4>
-                  <span>Cook</span>
+                  <h4>Dr. Beh Wee Ren</h4>
+                  <span>Dental Director & Surgeon</span>
                 </div>
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
@@ -953,7 +946,7 @@ else{
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
                 <h4>Location:</h4>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <p>No.88, Jalan Bukit Bintang, Puchong, 47100, Selangor</p>
               </div>
 
               <div class="open-hours">
@@ -961,20 +954,20 @@ else{
                 <h4>Open Hours:</h4>
                 <p>
                   Monday-Saturday:<br>
-                  11:00 AM - 2300 PM
+                  9:00 AM - 6:00 PM
                 </p>
               </div>
 
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>info@example.com</p>
+                <p>LuminousSD@gmail.com</p>
               </div>
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Call:</h4>
-                <p>+1 5589 55488 55s</p>
+                <p>06-123 12345</p>
               </div>
 
             </div>
@@ -1018,12 +1011,12 @@ else{
 
           <div class="col-lg-3 col-md-6">
             <div class="footer-info">
-              <h3>Restaurantly</h3>
+              <h3>DENTISTRY</h3>
               <p>
-                A108 Adam Street <br>
-                NY 535022, USA<br><br>
-                <strong>Phone:</strong> +1 5589 55488 55<br>
-                <strong>Email:</strong> info@example.com<br>
+                No.88, Jalan Bukit Bintang, <br>
+                Puchong, 47100, Selangor<br><br>
+                <strong>Phone:</strong> 06-123 12345<br>
+                <strong>Email:</strong> LuminousSD@gmail.com<br>
               </p>
               <div class="social-links mt-3">
                 <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -1049,17 +1042,15 @@ else{
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Services</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Preventive Care</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Restorative Dentistry</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Cosmetic Dentistry</a></li>
             </ul>
           </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <p>However, who can deny that many have benefited from our great dental care.</p>
             <form action="" method="post">
               <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>
@@ -1072,7 +1063,7 @@ else{
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>Restaurantly</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>Luminous Smiles Dentistry</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
@@ -1109,7 +1100,10 @@ else{
   <script src="assets\js\timepicker.js"></script>
 
   <script src="assets\js\appointment_form.js"></script>
+  <script src="assets\js\dentist_list.js"></script>
   <script src="assets\js\contactus.js"></script>
+  <script src="assets\js\logout.js"></script>
+
 
 </body>
 

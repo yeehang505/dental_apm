@@ -4,7 +4,7 @@ include("includes/db.php");
    
 $admin_id=$_POST['record'];
    
-    $sql = "SELECT admin_status FROM adminss where admin_id='$admin_id'"; 
+    $sql = "SELECT admin_status FROM admin where admin_id='$admin_id'"; 
     $result=$con-> query($sql);
   //  echo $result;
 
@@ -13,11 +13,11 @@ $admin_id=$_POST['record'];
    // echo $row["pay_status"];
     
     if($row["admin_status"]==0){
-         $update = mysqli_query($con,"UPDATE admins SET admin_status=1 where admin_id='$admin_id'");
+         $update = mysqli_query($con,"UPDATE admin SET admin_status=1 where admin_id='$admin_id'");
          
     }
     else if($row["admin_status"]==1){
-         $update = mysqli_query($con,"UPDATE admins SET admin_status=0 where admin_id='$admin_id'");
+         $update = mysqli_query($con,"UPDATE admin SET admin_status=0 where admin_id='$admin_id'");
          
      }
     

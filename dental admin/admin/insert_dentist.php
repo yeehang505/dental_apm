@@ -62,17 +62,11 @@ if (!isset($_SESSION['admin_email'])) {
                             <label for="specification">Specification:</label><br>
                             <select class="form-control" name="specification" required>
                                 <option value="">Select Specification</option>
-                                <?php
-                                // Retrieve specifications from the database
-                                $specification_query = "SELECT * FROM dentist";
-                                $run_specification = mysqli_query($con, $specification_query);
-
-                                // Populate the dropdown options
-                                while ($row = mysqli_fetch_assoc($run_specification)) {
-                                    $specification = $row['specification'];
-                                    echo "<option value='$specification'>$specification</option>";
-                                }
-                                ?>
+                                <option value="general">General</option>
+                                <option value="orthodontist">Orthodontist</option>
+                                <option value="pedodontist">Pedodontist</option>
+                                <option value="periodontist">Periodontist</option>
+                                <option value="cosmetic Dentist">Cosmetic Dentist</option>
                             </select>
                         </div>
 
@@ -100,8 +94,8 @@ if (isset($_POST['submit'])) {
     $specification = $_POST['specification'];
 
     // Insert data into the dentist table
-    $insert_dentist_query = "INSERT INTO dentist (den_name, den_contact, den_email, specification, availability_id) 
-                             VALUES ('$den_name', '$den_contact', '$den_email', '$specification', 1)";
+    $insert_dentist_query = "INSERT INTO dentist (den_name, den_contact, den_email, specification) 
+                             VALUES ('$den_name', '$den_contact', '$den_email', '$specification')";
     $insert_dentist_result = mysqli_query($con, $insert_dentist_query);
 
     // Check if the insertion was successful

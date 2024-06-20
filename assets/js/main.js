@@ -302,3 +302,7 @@ $(document).ready(function(){
     } // End if
   });
 });
+
+function scrollToSection(sectionId) {
+    window.location.href = 'index.php#' + sectionId; // Navigate to index.php and scroll to the specified section
+}

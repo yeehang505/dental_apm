@@ -67,14 +67,14 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto " href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#menu">Menu</a></li>
-          <li><a class="nav-link scrollto" href="#specials">Specials</a></li>
-          <li><a class="nav-link scrollto" href="#events">Events</a></li>
-          <li><a class="nav-link scrollto" href="#chefs">Chefs</a></li>
-          <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+        <li><a class="nav-link scrollto active" href="javascript:void(0)" onclick="scrollToSection('hero')">Home</a></li>
+        <li><a class="nav-link scrollto" href="javascript:void(0)" onclick="scrollToSection('about')">About</a></li>
+        <li><a class="nav-link scrollto" href="javascript:void(0)" onclick="scrollToSection('menu')">Services</a></li>
+        <li><a class="nav-link scrollto" href="javascript:void(0)" onclick="scrollToSection('specials')">Products</a></li>
+        <li><a class="nav-link scrollto" href="javascript:void(0)" onclick="scrollToSection('events')">Package</a></li>
+        <li><a class="nav-link scrollto" href="javascript:void(0)" onclick="scrollToSection('chefs')">Dentist</a></li>
+        <li><a class="nav-link scrollto" href="javascript:void(0)" onclick="scrollToSection('gallery')">Gallery</a></li>
+        <li><a class="nav-link scrollto" href="javascript:void(0)" onclick="scrollToSection('contactus')">Contact</a></li>          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
               <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
@@ -153,7 +153,7 @@
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>

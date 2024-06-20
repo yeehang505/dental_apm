@@ -93,24 +93,23 @@ else{
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#menu">Menu</a></li>
-          <li><a class="nav-link scrollto" href="#specials">Specials</a></li>
-          <li><a class="nav-link scrollto" href="#events">Events</a></li>
-          <li><a class="nav-link scrollto" href="#chefs">Dental</a></li>
-          <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li class="dropdown"><a href="javascript:void(0);"><span><?php echo $cust_name; ?></span> <i class="bi bi-chevron-down"></i></a>
+        <li><a class="nav-link scrollto active" href="javascript:void(0)" onclick="scrollToSection('hero')">Home</a></li>
+        <li><a class="nav-link scrollto" href="javascript:void(0)" onclick="scrollToSection('about')">About</a></li>
+        <li><a class="nav-link scrollto" href="javascript:void(0)" onclick="scrollToSection('menu')">Services</a></li>
+        <li><a class="nav-link scrollto" href="javascript:void(0)" onclick="scrollToSection('specials')">Products</a></li>
+        <li><a class="nav-link scrollto" href="javascript:void(0)" onclick="scrollToSection('events')">Package</a></li>
+        <li><a class="nav-link scrollto" href="javascript:void(0)" onclick="scrollToSection('chefs')">Dentist</a></li>
+        <li><a class="nav-link scrollto" href="javascript:void(0)" onclick="scrollToSection('gallery')">Gallery</a></li>
+        <li><a class="nav-link scrollto" href="javascript:void(0)" onclick="scrollToSection('contactus')">Contact</a></li>          <li class="dropdown"><a href="javascript:void(0);"><span><?php echo $cust_name; ?></span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li class="dropdown"><a href="#"><span>My Account</span> <i class="bi bi-chevron-right"></i></a>
+              <li class="dropdown"><a href="javascript:void(0);"><span>My Account</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a href="profile.php">Profile</a></li>
-                  <li><a href="#">Reset password</a></li>
+                  <li><a href="update_password.php">Reset password</a></li>
                 </ul>
               </li>
-              <li><a href="#">My appointment</a></li>
-              <li><a href="#">Log out</a></li>
+              <li><a href="my_appointment.php">My appointment</a></li>
+              <li><a href="javascript:void(0);" id="logout">Log out</a></li>
             </ul>
           </li>
         </ul>
@@ -181,7 +180,7 @@ else{
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
@@ -249,6 +248,7 @@ else{
   <script src="assets/js/main.js"></script>
 
   <script src="assets\js\update_password.js"></script>
+  <script src="assets\js\logout.js"></script>
 
 
 </body>

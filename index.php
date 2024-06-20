@@ -20,7 +20,7 @@ else{
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Restaurantly Bootstrap Template - Index</title>
+  <title>LUMINOUS SMILES DENTISTRY</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -235,7 +235,7 @@ else{
           <div class="col-lg-6 menu-item filter-starters">
             <img src="assets/img/menu/checkup.png" class="menu-img" alt="">
             <div class="menu-content">
-              <a href="#">Dental Check-ups</a><span>$5.95</span>
+              <a href="javascript:void(0)">Dental Check-ups</a><span>$5.95</span>
             </div>
             <div class="menu-ingredients">
             Regular examinations to monitor oral health and detect issues early.
@@ -245,7 +245,7 @@ else{
           <div class="col-lg-6 menu-item filter-specialty">
             <img src="assets/img/menu/whitening.png" class="menu-img" alt="">
             <div class="menu-content">
-              <a href="#">Teeth Whitening</a><span>$6.95</span>
+              <a href="javascript:void(0)">Teeth Whitening</a><span>$6.95</span>
             </div>
             <div class="menu-ingredients">
             Procedures to lighten and remove stains from teeth.
@@ -255,7 +255,7 @@ else{
           <div class="col-lg-6 menu-item filter-starters">
             <img src="assets/img/menu/fluoridetreatment.png" class="menu-img" alt="">
             <div class="menu-content">
-              <a href="#">Fluoride Treatments</a><span>$7.95</span>
+              <a href="javascript:void(0)">Fluoride Treatments</a><span>$7.95</span>
             </div>
             <div class="menu-ingredients">
             Application of fluoride to strengthen teeth and prevent cavities.
@@ -265,7 +265,7 @@ else{
           <div class="col-lg-6 menu-item filter-salads">
             <img src="assets/img/menu/filling.png" class="menu-img" alt="">
             <div class="menu-content">
-              <a href="#">Fillings</a><span>$8.95</span>
+              <a href="javascript:void(0)">Fillings</a><span>$8.95</span>
             </div>
             <div class="menu-ingredients">
             Repairing cavities with materials such as composite resin or amalgam.
@@ -275,7 +275,7 @@ else{
           <div class="col-lg-6 menu-item filter-specialty">
             <img src="assets/img/menu/dental-veneer.png" class="menu-img" alt="">
             <div class="menu-content">
-              <a href="#">Veneers</a><span>$9.95</span>
+              <a href="javascript:void(0)">Veneers</a><span>$9.95</span>
             </div>
             <div class="menu-ingredients">
             Thin shells of porcelain or composite resin bonded to the front of teeth to improve appearance.
@@ -285,7 +285,7 @@ else{
           <div class="col-lg-6 menu-item filter-starters">
             <img src="assets/img/menu/tooth-brush.png" class="menu-img" alt="">
             <div class="menu-content">
-              <a href="#">Teeth Cleaning</a><span>$4.95</span>
+              <a href="javascript:void(0)">Teeth Cleaning</a><span>$4.95</span>
             </div>
             <div class="menu-ingredients">
             Professional cleaning to remove plaque, tartar, and stains.
@@ -295,7 +295,7 @@ else{
           <div class="col-lg-6 menu-item filter-salads">
             <img src="assets/img/menu/dental-implant.png" class="menu-img" alt="">
             <div class="menu-content">
-              <a href="#">Crowns</a><span>$9.95</span>
+              <a href="javascript:void(0)">Crowns</a><span>$9.95</span>
             </div>
             <div class="menu-ingredients">
             Caps placed over damaged teeth to restore their shape, strength, and function.
@@ -305,7 +305,7 @@ else{
           <div class="col-lg-6 menu-item filter-salads">
             <img src="assets/img/menu/bridge.png" class="menu-img" alt="">
             <div class="menu-content">
-              <a href="#">Bridges</a><span>$9.95</span>
+              <a href="javascript:void(0)">Bridges</a><span>$9.95</span>
             </div>
             <div class="menu-ingredients">
             Fixed prosthetics used to replace one or more missing teeth.
@@ -315,7 +315,7 @@ else{
           <div class="col-lg-6 menu-item filter-specialty">
             <img src="assets/img/menu/bonding.png" class="menu-img" alt="">
             <div class="menu-content">
-              <a href="#">Bonding</a><span>$12.95</span>
+              <a href="javascript:void(0)">Bonding</a><span>$12.95</span>
             </div>
             <div class="menu-ingredients">
             Application of tooth-colored resin to repair chips, cracks, or gaps.
@@ -1010,7 +1010,7 @@ else{
 
           <div class="col-lg-3 col-md-6">
             <div class="footer-info">
-              <h3>DENTISTRY</h3>
+              <h3>LUMINOUS SMILES DENTISTRY</h3>
               <p>
                 No.88, Jalan Bukit Bintang, <br>
                 Puchong, 47100, Selangor<br><br>
@@ -1031,7 +1031,7 @@ else{
             <h4>Useful Links</h4>
             <ul>
               <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>

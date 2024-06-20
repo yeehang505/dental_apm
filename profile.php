@@ -23,7 +23,7 @@ else{
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Restaurantly Bootstrap Template - Index</title>
+  <title>LUMINOUS SMILES DENTISTRY</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -62,12 +62,6 @@ else{
   <!-- ======= Top Bar ======= -->
   <div id="topbar" class="d-flex align-items-center fixed-top">
     <div class="container d-flex justify-content-center justify-content-md-between">
-
-      <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-phone d-flex align-items-center"><span>+1 5589 55488 55</span></i>
-        <i class="bi bi-clock d-flex align-items-center ms-4"><span> Mon-Sat: 11AM - 23PM</span></i>
-      </div>
-
       <div class="languages d-none d-md-flex align-items-center">
         <ul>
           <?php
@@ -84,10 +78,10 @@ else{
   </div>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-cente">
+  <header id="header" class="d-flex align-items-cente">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
 
-      <h1 class="logo me-auto me-lg-0"><a href="index.php">Restaurantly</a></h1>
+      <h1 class="logo me-auto me-lg-0"><a href="index.php">LUMINOUS SMILES DENTISTRY</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.php" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -100,7 +94,8 @@ else{
         <li><a class="nav-link scrollto" href="javascript:void(0)" onclick="scrollToSection('events')">Package</a></li>
         <li><a class="nav-link scrollto" href="javascript:void(0)" onclick="scrollToSection('chefs')">Dentist</a></li>
         <li><a class="nav-link scrollto" href="javascript:void(0)" onclick="scrollToSection('gallery')">Gallery</a></li>
-        <li><a class="nav-link scrollto" href="javascript:void(0)" onclick="scrollToSection('contactus')">Contact</a></li>          <li class="dropdown"><a href="javascript:void(0);"><span><?php echo $cust_name; ?></span> <i class="bi bi-chevron-down"></i></a>
+        <li><a class="nav-link scrollto" href="javascript:void(0)" onclick="scrollToSection('contactus')">Contact</a></li>          
+        <li class="dropdown"><a href="javascript:void(0);"><span><?php echo $cust_name; ?></span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li class="dropdown"><a href="javascript:void(0);"><span>My Account</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
@@ -167,14 +162,14 @@ else{
       <div class="container">
         <div class="row">
 
-          <div class="col-lg-3 col-md-6">
+        <div class="col-lg-3 col-md-6">
             <div class="footer-info">
-              <h3>Restaurantly</h3>
+              <h3>LUMINOUS SMILES DENTISTRY</h3>
               <p>
-                A108 Adam Street <br>
-                NY 535022, USA<br><br>
-                <strong>Phone:</strong> +1 5589 55488 55<br>
-                <strong>Email:</strong> info@example.com<br>
+                No.88, Jalan Bukit Bintang, <br>
+                Puchong, 47100, Selangor<br><br>
+                <strong>Phone:</strong> 06-123 12345<br>
+                <strong>Email:</strong> LuminousSD@gmail.com<br>
               </p>
               <div class="social-links mt-3">
                 <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -200,17 +195,15 @@ else{
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Services</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Preventive Care</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Restorative Dentistry</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Cosmetic Dentistry</a></li>
             </ul>
           </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <p>However, who can deny that many have benefited from our great dental care.</p>
             <form action="" method="post">
               <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>
@@ -223,7 +216,7 @@ else{
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>Restaurantly</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>Luminous Smiles Dentistry</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->

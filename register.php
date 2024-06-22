@@ -64,9 +64,9 @@
     </script> 
 </head>  
 <body>  
-    <div class="logo">
-        <div><img src="assets/img/logo.png"></div>
-        <div class="logo-label"><label>LUMINOUS SMILES DENTISTRY</label></div>
+<div class="logo">
+        <!--<div><img src="assets/img/logo.png"></div>-->
+        <div class="logo-label"><label>LUMINUOUS SMILES DENTISTRY</label></div>
     </div>
     
     <div class="wrapper" style="margin-top: 120px;">
@@ -86,11 +86,11 @@
 
             <div class="input-box">
                 <input name = "contact" type="text" placeholder="Contact Number" pattern="[0-9]{10,11}" required>
-                <div class="input-image"><i class='bx bxs-envelope'></i></div>
+                <div class="input-image"><i class='bx bxs-phone'></i></div>
             </div>
             <div class="input-box">
                 <input name = "ic" type="text" placeholder="IC" pattern="[0-9]{12}" required>
-                <div class="input-image"><i class='bx bxs-envelope'></i></div>
+                <div class="input-image"><i class='bx bxs-id-card' ></i></div>
             </div>
 
             <div class="input-box" >

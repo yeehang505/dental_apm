@@ -34,7 +34,7 @@
 <body>  
     <div class="logo">
         <div><img src="assets/img/logo.png"></div>
-        <div class="logo-label"><label>T-care</label></div>
+        <div class="logo-label"><label>LUMINOUS SMILES DENTISTRY</label></div>
     </div>
     
     <div class="wrapper">

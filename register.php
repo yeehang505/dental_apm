@@ -66,10 +66,10 @@
 <body>  
     <div class="logo">
         <div><img src="assets/img/logo.png"></div>
-        <div class="logo-label"><label>T-care</label></div>
+        <div class="logo-label"><label>LUMINOUS SMILES DENTISTRY</label></div>
     </div>
     
-    <div class="wrapper">
+    <div class="wrapper" style="margin-top: 120px;">
         
         <form name="f2" action = " assets/php/registration.php" onsubmit = "return validation()" method = "POST">
             <div class="title"><h2>Registration</h2></div>

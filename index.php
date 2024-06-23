@@ -235,7 +235,7 @@ else{
           <div class="col-lg-6 menu-item filter-starters">
             <img src="assets/img/menu/checkup.png" class="menu-img" alt="">
             <div class="menu-content">
-              <a href="javascript:void(0)">Dental Check-ups</a><span>$5.95</span>
+              <a href="javascript:void(0)">Dental Check-ups</a><span>RM150.00</span>
             </div>
             <div class="menu-ingredients">
             Regular examinations to monitor oral health and detect issues early.
@@ -245,7 +245,7 @@ else{
           <div class="col-lg-6 menu-item filter-specialty">
             <img src="assets/img/menu/whitening.png" class="menu-img" alt="">
             <div class="menu-content">
-              <a href="javascript:void(0)">Teeth Whitening</a><span>$6.95</span>
+              <a href="javascript:void(0)">Teeth Whitening</a><span>RM150.00</span>
             </div>
             <div class="menu-ingredients">
             Procedures to lighten and remove stains from teeth.
@@ -255,7 +255,7 @@ else{
           <div class="col-lg-6 menu-item filter-starters">
             <img src="assets/img/menu/fluoridetreatment.png" class="menu-img" alt="">
             <div class="menu-content">
-              <a href="javascript:void(0)">Fluoride Treatments</a><span>$7.95</span>
+              <a href="javascript:void(0)">Fluoride Treatments</a><span>RM150.00</span>
             </div>
             <div class="menu-ingredients">
             Application of fluoride to strengthen teeth and prevent cavities.
@@ -265,7 +265,7 @@ else{
           <div class="col-lg-6 menu-item filter-salads">
             <img src="assets/img/menu/filling.png" class="menu-img" alt="">
             <div class="menu-content">
-              <a href="javascript:void(0)">Fillings</a><span>$8.95</span>
+              <a href="javascript:void(0)">Fillings</a><span>RM188.00</span>
             </div>
             <div class="menu-ingredients">
             Repairing cavities with materials such as composite resin or amalgam.
@@ -275,7 +275,7 @@ else{
           <div class="col-lg-6 menu-item filter-specialty">
             <img src="assets/img/menu/dental-veneer.png" class="menu-img" alt="">
             <div class="menu-content">
-              <a href="javascript:void(0)">Veneers</a><span>$9.95</span>
+              <a href="javascript:void(0)">Veneers</a><span>RM220.00</span>
             </div>
             <div class="menu-ingredients">
             Thin shells of porcelain or composite resin bonded to the front of teeth to improve appearance.
@@ -285,7 +285,7 @@ else{
           <div class="col-lg-6 menu-item filter-starters">
             <img src="assets/img/menu/tooth-brush.png" class="menu-img" alt="">
             <div class="menu-content">
-              <a href="javascript:void(0)">Teeth Cleaning</a><span>$4.95</span>
+              <a href="javascript:void(0)">Teeth Cleaning</a><span>RM180.00</span>
             </div>
             <div class="menu-ingredients">
             Professional cleaning to remove plaque, tartar, and stains.
@@ -295,7 +295,7 @@ else{
           <div class="col-lg-6 menu-item filter-salads">
             <img src="assets/img/menu/dental-implant.png" class="menu-img" alt="">
             <div class="menu-content">
-              <a href="javascript:void(0)">Crowns</a><span>$9.95</span>
+              <a href="javascript:void(0)">Crowns</a><span>RM500.00</span>
             </div>
             <div class="menu-ingredients">
             Caps placed over damaged teeth to restore their shape, strength, and function.
@@ -305,7 +305,7 @@ else{
           <div class="col-lg-6 menu-item filter-salads">
             <img src="assets/img/menu/bridge.png" class="menu-img" alt="">
             <div class="menu-content">
-              <a href="javascript:void(0)">Bridges</a><span>$9.95</span>
+              <a href="javascript:void(0)">Bridges</a><span>RM750.00</span>
             </div>
             <div class="menu-ingredients">
             Fixed prosthetics used to replace one or more missing teeth.
@@ -315,7 +315,7 @@ else{
           <div class="col-lg-6 menu-item filter-specialty">
             <img src="assets/img/menu/bonding.png" class="menu-img" alt="">
             <div class="menu-content">
-              <a href="javascript:void(0)">Bonding</a><span>$12.95</span>
+              <a href="javascript:void(0)">Bonding</a><span>RM250.00</span>
             </div>
             <div class="menu-ingredients">
             Application of tooth-colored resin to repair chips, cracks, or gaps.
@@ -425,8 +425,8 @@ else{
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Events</h2>
-          <p>Organize Your Events in our Restaurant</p>
+          <h2>Packages</h2>
+          <p>Save money and More worth</p>
         </div>
 
         <div class="events-slider swiper" data-aos="fade-up" data-aos-delay="100">
@@ -435,26 +435,23 @@ else{
             <div class="swiper-slide">
               <div class="row event-item">
                 <div class="col-lg-6">
-                  <img src="assets/img/event-birthday.jpg" class="img-fluid" alt="">
+                  <img src="assets/img/design1.jpg" class="img-fluid" alt="">
                 </div>
                 <div class="col-lg-6 pt-4 pt-lg-0 content">
-                  <h3>Birthday Parties</h3>
+                  <h3>Basic Care Package</h3>
                   <div class="price">
-                    <p><span>$189</span></p>
+                    <p><span>RM480</span></p>
                   </div>
                   <p class="fst-italic">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua.
+                  Ideal for maintaining good oral health, this package includes essential preventive care.
                   </p>
                   <ul>
-                    <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                    <li><i class="bi bi-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                    <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                    <li><i class="bi bi-check-circled"></i> Dental Check-up</li>
+                    <li><i class="bi bi-check-circled"></i> Fluoride Treatment</li>
+                    <li><i class="bi bi-check-circled"></i> Teeth Cleaning</li>
+                    <li><i class="bi bi-check-circled"></i> Fillings (up to 2)</li>
                   </ul>
-                  <p>
-                    Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                    velit esse cillum dolore eu fugiat nulla pariatur
-                  </p>
+
                 </div>
               </div>
             </div><!-- End testimonial item -->
@@ -462,26 +459,23 @@ else{
             <div class="swiper-slide">
               <div class="row event-item">
                 <div class="col-lg-6">
-                  <img src="assets/img/event-private.jpg" class="img-fluid" alt="">
+                  <img src="assets/img/design2.jpg" class="img-fluid" alt="">
                 </div>
                 <div class="col-lg-6 pt-4 pt-lg-0 content">
-                  <h3>Private Parties</h3>
+                  <h3>Cosmetic Care Package</h3>
                   <div class="price">
-                    <p><span>$290</span></p>
+                    <p><span>RM600</span></p>
                   </div>
                   <p class="fst-italic">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua.
+                  Perfect for those looking to enhance their smile with cosmetic treatments.
                   </p>
                   <ul>
-                    <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                    <li><i class="bi bi-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                    <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                  <li><i class="bi bi-check-circled"></i> Dental Check-up</li>
+                    <li><i class="bi bi-check-circled"></i> Teeth Whitening</li>
+                    <li><i class="bi bi-check-circled"></i> Veneers (up to 2)</li>
+                    <li><i class="bi bi-check-circled"></i> Bonding (up to 2 teeth)</li>
                   </ul>
-                  <p>
-                    Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                    velit esse cillum dolore eu fugiat nulla pariatur
-                  </p>
+                
                 </div>
               </div>
             </div><!-- End testimonial item -->
@@ -489,26 +483,26 @@ else{
             <div class="swiper-slide">
               <div class="row event-item">
                 <div class="col-lg-6">
-                  <img src="assets/img/event-custom.jpg" class="img-fluid" alt="">
+                  <img src="assets/img/design3.jpg" class="img-fluid" alt="">
                 </div>
                 <div class="col-lg-6 pt-4 pt-lg-0 content">
-                  <h3>Custom Parties</h3>
+                  <h3>Comprehensive Care Package</h3>
                   <div class="price">
-                    <p><span>$99</span></p>
+                    <p><span>RM1500</span></p>
                   </div>
                   <p class="fst-italic">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua.
+                  This all-inclusive package provides extensive dental care for both health and aesthetics.
                   </p>
                   <ul>
-                    <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                    <li><i class="bi bi-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                    <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                    <li><i class="bi bi-check-circled"></i> Dental Check-up</li>
+                    <li><i class="bi bi-check-circled"></i> Fluoride Treatment</li>
+                    <li><i class="bi bi-check-circled"></i> Teeth Cleaning</li>
+                    <li><i class="bi bi-check-circled"></i> Fillings (up to 4)</li>
+                    <li><i class="bi bi-check-circled"></i> Crowns (up to 2)</li>
+                    <li><i class="bi bi-check-circled"></i> Bridges (up to 2 units)</li>
+                    <li><i class="bi bi-check-circled"></i> Teeth Whitening</li>
                   </ul>
-                  <p>
-                    Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                    velit esse cillum dolore eu fugiat nulla pariatur
-                  </p>
+                  
                 </div>
               </div>
             </div><!-- End testimonial item -->
@@ -702,12 +696,11 @@ else{
               <div class="testimonial-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  My experience with the dental check-ups here has been excellent. The dentist was thorough and took the time to explain everything in detail. I felt well-informed about my oral health, and the whole process was comfortable and stress-free. I highly recommend these check-ups for anyone looking to stay on top of their dental health.                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
                 <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
+                
               </div>
             </div><!-- End testimonial item -->
 
@@ -715,12 +708,11 @@ else{
               <div class="testimonial-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  I recently had a fluoride treatment and I can already feel the difference. My teeth feel stronger and more resilient. The process was quick and easy, and the dentist made sure I was comfortable throughout. It's a simple but highly effective treatment that I would recommend to anyone looking to protect their teeth.                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
                 <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
+                
               </div>
             </div><!-- End testimonial item -->
 
@@ -728,12 +720,11 @@ else{
               <div class="testimonial-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  I needed crowns on a couple of my teeth and was nervous about the procedure. The dentist was incredibly reassuring and professional. The crowns look and feel just like my natural teeth. The entire process was smooth, and I couldn't be happier with the results. I highly recommend their crown services!                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
                 <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
+                
               </div>
             </div><!-- End testimonial item -->
 
@@ -741,12 +732,11 @@ else{
               <div class="testimonial-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  Getting veneers was the best decision I made for my smile. The dentist was meticulous, ensuring that the veneers matched perfectly with my natural teeth. The results are fantastic – my teeth look natural and beautiful. I can't stop smiling, and I've received so many compliments. Thank you for giving me the smile I've always wanted!                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
                 <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
+                
               </div>
             </div><!-- End testimonial item -->
 
@@ -754,12 +744,11 @@ else{
               <div class="testimonial-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  I had my teeth whitened here and the results are amazing. The procedure was comfortable and the dentist explained each step. My teeth are several shades whiter and the difference is noticeable. It's given me so much more confidence in my smile. If you're thinking about teeth whitening, do it here – you won't be disappointed!                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
                 <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
+                
               </div>
             </div><!-- End testimonial item -->
 

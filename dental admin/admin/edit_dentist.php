@@ -30,7 +30,6 @@ if (!isset($_GET['edit_dentist'])) {
     $den_contact = $row_edit['den_contact'];
     $den_email = $row_edit['den_email'];
     $specification = $row_edit['specification'];
-    $availability_id = $row_edit['availability_id'];
 }
 ?>
 
@@ -81,13 +80,6 @@ if (!isset($_GET['edit_dentist'])) {
                             <option value="Cosmetic Dentist" <?php if ($specification == 'Cosmetic Dentist') echo 'selected'; ?>>Cosmetic Dentist</option>
                         </select>
                     </div>
-                    <div class="form-group">
-                        <label for="availability_id">Availability Status:</label>
-                        <select class="form-control" name="availability_id" required>
-                            <option value="1" <?php if ($availability_id == 1) echo 'selected'; ?>>Available</option>
-                            <option value="0" <?php if ($availability_id == 0) echo 'selected'; ?>>Not Available</option>
-                        </select>
-                    </div>
                     <button type="submit" class="btn btn-primary" name="update_dentist">Update Dentist</button>
                 </form>
             </div>
@@ -105,10 +97,9 @@ if (isset($_POST['update_dentist'])) {
     $den_contact = $_POST['den_contact'];
     $den_email = $_POST['den_email'];
     $specification = $_POST['specification'];
-    $availability_id = $_POST['availability_id'];
 
     // Update dentist details in the database
-    $update_query = "UPDATE dentist SET den_name='$den_name', den_contact='$den_contact', den_email='$den_email', specification='$specification', availability_id='$availability_id' WHERE den_id='$den_id'";
+    $update_query = "UPDATE dentist SET den_name='$den_name', den_contact='$den_contact', den_email='$den_email', specification='$specification' WHERE den_id='$den_id'";
     $update_result = mysqli_query($con, $update_query);
 
     // Check if the update was successful
